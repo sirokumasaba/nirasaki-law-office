@@ -1,79 +1,773 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>にらさき法律事務所 | 弁護士 江口伸介</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>にらさき法律事務所 | 相続・遺産分割の弁護士相談</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --ink-light: #4a3f35;
+    --parchment: #f5f0e8;
+    --cream: #faf7f2;
+    --gold: #b8935a;
+    --gold-light: #d4b483;
+    --rust: #8b4a2f;
+    --sage: #5a6b5a;
+    --border: #d4c8b0;
+    --shadow: rgba(26,20,16,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+  }
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--ink); letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ink-light);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--ink); color: var(--cream) !important;
+    padding: 0.55rem 1.4rem; border-radius: 2px;
+    font-size: 0.75rem !important; letter-spacing: 0.15em;
+    transition: background 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--ink) !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+    position: relative; overflow: hidden;
+  }
+  .hero-left {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 8vw;
+    position: relative; z-index: 2;
+  }
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem; letter-spacing: 0.35em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 500; line-height: 1.3;
+    letter-spacing: 0.05em; margin-bottom: 1.5rem;
+  }
+  .hero-title em {
+    font-style: normal; color: var(--gold);
+    display: block; font-size: 0.55em;
+    font-weight: 400; letter-spacing: 0.15em;
+    margin-bottom: 0.3rem;
+  }
+  .hero-sub {
+    font-size: 1rem; line-height: 2; color: var(--ink-light);
+    max-width: 380px; margin-bottom: 3rem;
+  }
+  .hero-badges {
+    display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;
+  }
+  .badge {
+    border: 1px solid var(--gold); color: var(--gold);
+    padding: 0.4rem 1rem; font-size: 0.75rem; letter-spacing: 0.1em;
+    border-radius: 2px;
+  }
+  .hero-cta-group { display: flex; gap: 1rem; align-items: center; }
+  .btn-primary {
+    background: var(--gold); color: var(--cream);
+    padding: 1rem 2.5rem; font-family: 'Noto Serif JP', serif;
+    font-size: 0.85rem; letter-spacing: 0.15em; border: none;
+    cursor: pointer; transition: all 0.3s; text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
+  .btn-secondary {
+    color: var(--ink); font-size: 0.82rem; letter-spacing: 0.12em;
+    text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
+    border-bottom: 1px solid var(--border); padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+
+  .hero-right {
+    position: relative; overflow: hidden;
+    background: var(--parchment);
+  }
+  .hero-image-grid {
+    position: absolute; inset: 0;
+    display: grid; grid-template-rows: 1fr 1fr; gap: 0;
+  }
+  .hero-img-main {
+    background: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center/cover;
+    position: relative;
+  }
+  .hero-img-main::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(184,147,90,0.15) 0%, transparent 60%);
+  }
+  .hero-img-sub {
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+  .hero-img-sub div {
+    background-size: cover; background-position: center;
+  }
+  .hero-img-sub div:first-child {
+    background-image: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/5006ceec19ca4c8391e7ce370609d66a/%E5%86%99%E7%9C%9F%EF%BC%92%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
+    border-right: 2px solid var(--cream);
+  }
+  .hero-img-sub div:last-child {
+    background-image: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/1898d03238d74954a30f901391cb1d58/%E5%86%99%E7%9C%9F%EF%BC%93%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
+  }
+  .hero-tag {
+    position: absolute; bottom: 2rem; left: 2rem;
+    background: var(--cream); padding: 1.2rem 1.8rem;
+    border-left: 3px solid var(--gold); z-index: 3;
+    box-shadow: 0 8px 30px var(--shadow);
+  }
+  .hero-tag .tag-num {
+    font-family: 'DM Serif Display', serif; font-size: 2rem;
+    color: var(--gold); line-height: 1;
+  }
+  .hero-tag .tag-label {
+    font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ink-light);
+    margin-top: 0.2rem;
+  }
+
+  /* ─── TICKER ─── */
+  .ticker {
+    background: var(--ink); color: var(--cream);
+    padding: 0.9rem 0; overflow: hidden;
+    display: flex; gap: 0; white-space: nowrap;
+  }
+  .ticker-track {
+    display: flex; gap: 4rem;
+    animation: ticker 25s linear infinite;
+    font-size: 0.78rem; letter-spacing: 0.2em; color: var(--gold-light);
+  }
+  .ticker-track span { display: flex; align-items: center; gap: 1rem; }
+  .ticker-track span::before { content: '◆'; font-size: 0.5rem; color: var(--gold); }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 7rem 8vw; }
+  .section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem; letter-spacing: 0.4em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); max-width: 60px; }
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 500; line-height: 1.4; letter-spacing: 0.05em;
+  }
+
+  /* ─── FEATURES ─── */
+  .features {
+    background: var(--parchment);
+    display: grid; grid-template-columns: 1fr 2fr; gap: 6rem;
+    align-items: start;
+  }
+  .features-intro { position: sticky; top: 100px; }
+  .features-intro p {
+    margin-top: 1.5rem; font-size: 0.95rem; line-height: 2;
+    color: var(--ink-light);
+  }
+  .features-grid { display: flex; flex-direction: column; gap: 0; }
+  .feature-item {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 80px 1fr; gap: 2rem;
+    align-items: start;
+    transition: all 0.3s;
+  }
+  .feature-item:first-child { border-top: 1px solid var(--border); }
+  .feature-item:hover { padding-left: 1rem; }
+  .feature-num {
+    font-family: 'DM Serif Display', serif; font-size: 2.5rem;
+    color: var(--border); line-height: 1;
+    transition: color 0.3s;
+  }
+  .feature-item:hover .feature-num { color: var(--gold); }
+  .feature-content h3 {
+    font-family: 'Shippori Mincho', serif; font-size: 1.15rem;
+    font-weight: 500; margin-bottom: 0.8rem; letter-spacing: 0.05em;
+  }
+  .feature-content p { font-size: 0.88rem; line-height: 1.9; color: var(--ink-light); }
+
+  /* ─── CONCERNS ─── */
+  .concerns { background: var(--ink); color: var(--cream); }
+  .concerns .section-label { color: var(--gold-light); }
+  .concerns .section-label::after { background: rgba(255,255,255,0.15); }
+  .concerns .section-title { color: var(--cream); }
+  .concerns-grid {
+    margin-top: 3.5rem;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .concern-card {
+    border: 1px solid rgba(184,147,90,0.3);
+    padding: 1.8rem 2rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .concern-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(184,147,90,0.05) 0%, transparent 100%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .concern-card:hover { border-color: var(--gold); }
+  .concern-card:hover::before { opacity: 1; }
+  .concern-check {
+    width: 24px; height: 24px; flex-shrink: 0;
+    border: 1px solid var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 0.65rem; margin-top: 2px;
+  }
+  .concern-card p { font-size: 0.88rem; line-height: 1.7; color: rgba(250,247,242,0.85); }
+
+  /* ─── PROFILE ─── */
+  .profile {
+    background: var(--cream);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    align-items: center;
+  }
+  .profile-visual { position: relative; }
+  .profile-img-wrap {
+    aspect-ratio: 4/5; background: var(--parchment);
+    position: relative; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .profile-img-wrap::before {
+    content: ''; position: absolute;
+    top: -20px; left: -20px; right: 20px; bottom: 20px;
+    border: 1px solid var(--gold); z-index: 0;
+  }
+  .profile-img-inner {
+    position: absolute; inset: 0;
+    background: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center/cover;
+  }
+  .profile-card {
+    position: absolute; bottom: -1.5rem; right: -1.5rem;
+    background: var(--gold); color: var(--cream);
+    padding: 1.5rem 2rem; z-index: 2;
+  }
+  .profile-card .years {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem; line-height: 1;
+  }
+  .profile-card .years-label { font-size: 0.72rem; letter-spacing: 0.1em; margin-top: 0.3rem; opacity: 0.85; }
+
+  .profile-content .lawyer-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2rem; font-weight: 500; letter-spacing: 0.1em;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .profile-content .lawyer-name span {
+    display: block; font-size: 0.65em; color: var(--gold);
+    font-weight: 400; letter-spacing: 0.2em; margin-bottom: 0.3rem;
+  }
+  .profile-content .lawyer-sub {
+    font-size: 0.82rem; color: var(--ink-light); letter-spacing: 0.1em;
+    margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);
+  }
+  .profile-content p {
+    font-size: 0.9rem; line-height: 2.1; color: var(--ink-light);
+    margin-bottom: 1.2rem;
+  }
+  .profile-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    margin-top: 2rem;
+  }
+  .stat-box {
+    border: 1px solid var(--border); padding: 1.2rem;
+    text-align: center;
+  }
+  .stat-box .stat-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem; color: var(--gold); line-height: 1;
+  }
+  .stat-box .stat-label {
+    font-size: 0.72rem; color: var(--ink-light); letter-spacing: 0.08em;
+    margin-top: 0.3rem;
+  }
+
+  /* ─── FEES ─── */
+  .fees { background: var(--parchment); }
+  .fees-grid {
+    margin-top: 3.5rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px; border: 1px solid var(--border);
+  }
+  .fee-card {
+    background: var(--cream); padding: 3rem 2.5rem;
+    border-right: 1px solid var(--border);
+  }
+  .fee-card:last-child { border-right: none; }
+  .fee-type {
+    font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold);
+    margin-bottom: 1.5rem; text-transform: uppercase;
+  }
+  .fee-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem; line-height: 1; margin-bottom: 0.5rem;
+  }
+  .fee-amount span { font-size: 1rem; font-family: 'Noto Serif JP', serif; }
+  .fee-note { font-size: 0.82rem; line-height: 1.8; color: var(--ink-light); margin-top: 1.2rem; }
+
+  /* ─── INFO ─── */
+  .info { background: var(--cream); }
+  .info-grid {
+    margin-top: 3.5rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: start;
+  }
+  .info-table { border-collapse: collapse; width: 100%; }
+  .info-table tr { border-bottom: 1px solid var(--border); }
+  .info-table td {
+    padding: 1.1rem 0; font-size: 0.88rem; vertical-align: top;
+  }
+  .info-table td:first-child {
+    color: var(--ink-light); font-size: 0.8rem; letter-spacing: 0.08em;
+    width: 110px; padding-right: 1rem;
+  }
+  .info-table td:last-child { color: var(--ink); line-height: 1.7; }
+  .map-placeholder {
+    aspect-ratio: 4/3; background: var(--parchment);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .map-inner {
+    width: 100%; height: 100%;
+  }
+  .map-inner iframe { width: 100%; height: 100%; border: 0; }
+
+  /* ─── CONTACT ─── */
+  .contact {
+    background: var(--ink); color: var(--cream);
+    text-align: center; padding: 6rem 8vw;
+    position: relative; overflow: hidden;
+  }
+  .contact::before {
+    content: '法'; position: absolute;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 30vw; font-weight: 700;
+    color: rgba(255,255,255,0.025);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .contact .section-label { justify-content: center; color: var(--gold-light); }
+  .contact .section-label::after { display: none; }
+  .contact .section-label::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .contact .section-title { color: var(--cream); margin-bottom: 1rem; }
+  .contact-sub { color: rgba(250,247,242,0.6); font-size: 0.9rem; line-height: 1.9; margin-bottom: 3rem; }
+  .contact-options { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+  .contact-card {
+    border: 1px solid rgba(184,147,90,0.4); padding: 2.5rem 3rem;
+    flex: 1; max-width: 320px; transition: all 0.3s;
+    text-decoration: none; color: var(--cream);
+    display: block;
+  }
+  .contact-card:hover { border-color: var(--gold); background: rgba(184,147,90,0.08); }
+  .contact-card .c-icon { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold); }
+  .contact-card h3 { font-family: 'Shippori Mincho', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .contact-card p { font-size: 0.78rem; color: rgba(250,247,242,0.55); line-height: 1.7; }
+  .contact-free-note {
+    margin-top: 2.5rem; font-size: 0.78rem;
+    color: rgba(250,247,242,0.4); letter-spacing: 0.1em;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #110e0b; color: rgba(250,247,242,0.4);
+    padding: 2.5rem 8vw;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.75rem; letter-spacing: 0.1em;
+  }
+  footer .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem; color: rgba(250,247,242,0.7);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-in {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 4rem 6vw 3rem; }
+    .hero-right { height: 50vw; min-height: 300px; }
+    .features { grid-template-columns: 1fr; gap: 3rem; }
+    .features-intro { position: static; }
+    .profile { grid-template-columns: 1fr; gap: 3rem; }
+    .info-grid { grid-template-columns: 1fr; }
+    section { padding: 5rem 6vw; }
+    .fee-card { border-right: none; border-bottom: 1px solid var(--border); }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
 </head>
 <body>
 
-<header>
-    <div class="container header-inner">
-        <a href="index.html" class="logo-area"><div class="main">にらさき法律事務所</div></a>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="inheritance.html">相続案内</a></li>
-                <li><a href="#access">アクセス</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span>に</span>らさき法律事務所</a>
+  <ul class="nav-links">
+    <li><a href="#features">強み・特徴</a></li>
+    <li><a href="#concerns">お悩み</a></li>
+    <li><a href="#profile">弁護士紹介</a></li>
+    <li><a href="#fees">料金</a></li>
+    <li><a href="#info">事務所情報</a></li>
+    <li><a href="#contact" class="nav-cta">無料相談</a></li>
+  </ul>
+</nav>
 
-<section id="hero">
-    <div class="container">
-        <div class="hero-tag">初回相談無料</div>
-        <h1>「何とかなる」が合言葉です<br>山梨県韮崎市の法律相談</h1>
-        <p style="color: #888;">弁護士登録から17年。あなたの不安を安心に変えるお手伝いをします。</p>
-        <a href="tel:05052849388" class="hero-info">📞 050-5284-9388</a>
-        <p style="margin-top: 15px; font-size: 0.9rem;">平日 9:15〜18:00（夜間・土日も事前予約で対応可）</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">相続・遺産分割専門</div>
+    <h1 class="hero-title">
+      <em>Nirasaki Law Office</em>
+      複雑な相続も<br>円満解決へ。
+    </h1>
+    <p class="hero-sub">
+      多数の相続人、行方不明者、複雑な不動産問題——<br>
+      どんな難題も「何とかなる」の信念で、<br>
+      粘り強く解決へ導きます。
+    </p>
+    <div class="hero-badges">
+      <span class="badge">初回相談 無料</span>
+      <span class="badge">平日夜間対応可</span>
+      <span class="badge">オンライン相談可</span>
     </div>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn-primary">無料相談のご予約</a>
+      <a href="#features" class="btn-secondary">詳しく見る →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-grid">
+      <div class="hero-img-main"></div>
+      <div class="hero-img-sub">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="hero-tag">
+      <div class="tag-num">17</div>
+      <div class="tag-label">年の弁護士経験</div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>初回相談無料</span>
+    <span>遺産分割</span>
+    <span>相続放棄</span>
+    <span>遺言書作成</span>
+    <span>遺留分請求</span>
+    <span>不在者財産管理</span>
+    <span>相続登記</span>
+    <span>遺言無効確認訴訟</span>
+    <span>行方不明相続人対応</span>
+    <span>司法書士・税理士連携</span>
+    <span>初回相談無料</span>
+    <span>遺産分割</span>
+    <span>相続放棄</span>
+    <span>遺言書作成</span>
+    <span>遺留分請求</span>
+    <span>不在者財産管理</span>
+    <span>相続登記</span>
+    <span>遺言無効確認訴訟</span>
+    <span>行方不明相続人対応</span>
+    <span>司法書士・税理士連携</span>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="features-intro fade-in">
+    <div class="section-label">Our Strengths</div>
+    <h2 class="section-title">当事務所の<br>強みと特徴</h2>
+    <p>山梨県北西部に根ざし、地域の皆さまの相続問題に17年間向き合ってきました。</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-item fade-in">
+      <div class="feature-num">01</div>
+      <div class="feature-content">
+        <h3>じっくりお話を伺います</h3>
+        <p>打ち合わせに2時間ほどお時間をいただくことも珍しくありません。ご相談者さまの不安と本当のお気持ちを深く理解することを何よりも大切にしています。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-num">02</div>
+      <div class="feature-content">
+        <h3>複雑な相続案件に豊富な実績</h3>
+        <p>相続人が何十人にも膨れ上がったケース、行方不明者がいるケース、長年放置された不動産問題など、難題もお任せください。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-num">03</div>
+      <div class="feature-content">
+        <h3>司法書士・税理士と連携しワンストップ対応</h3>
+        <p>戸籍謄本の収集から遺産分割協議書の作成、登記手続き、税務申告まで。お客さまがあちこちを訪ねるお手間はかかりません。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-num">04</div>
+      <div class="feature-content">
+        <h3>平日夜間・オンライン相談に対応</h3>
+        <p>お仕事終わりの時間帯（19時半頃まで）でも対応可能。オンラインでのご相談もお受けしています。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-num">05</div>
+      <div class="feature-content">
+        <h3>「何とかなる」の信念で粘り強く</h3>
+        <p>ご依頼いただいた相続案件のほとんどを最終的な解決まで見届けてまいりました。困難に見える状況でも諦めずに取り組みます。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="container" style="padding: 80px 0;">
-    <h2 class="section-title">当事務所の3つの特長</h2>
-    <div class="grid-2">
-        <div class="info-card">
-            <h3 style="color: var(--accent); margin-bottom: 15px;">1. 17年の豊富な経験</h3>
-            <p>2007年の登録以来、多くの困難な事案を解決してきました。複雑な権利関係も粘り強く紐解きます。</p>
-        </div>
-        <div class="info-card">
-            <h3 style="color: var(--accent); margin-bottom: 15px;">2. じっくり丁寧な聴き取り</h3>
-            <p>打ち合わせに2時間かけることも珍しくありません。ご本人が納得できる解決策を一緒に探します。</p>
-        </div>
-        <div class="info-card">
-            <h3 style="color: var(--accent); margin-bottom: 15px;">3. 地域密着の連携体制</h3>
-            <p>地元の税理士や司法書士と連携。相続税や登記まで窓口ひとつでトータルサポート可能です。</p>
-        </div>
-        <div class="info-card">
-            <h3 style="color: var(--accent); margin-bottom: 15px;">4. 柔軟な相談体制</h3>
-            <p>お仕事帰りの相談（19時半頃まで）や、当日予約、ビデオ相談も状況に応じて柔軟に対応します。</p>
-        </div>
+<!-- CONCERNS -->
+<section class="concerns" id="concerns">
+  <div class="section-label fade-in">Concerns We Solve</div>
+  <h2 class="section-title fade-in">こんなお悩み<br>お任せください</h2>
+  <div class="concerns-grid">
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>多数の相続人で登記が進まず困っている</p>
     </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>行方不明の相続人がいて遺産分割ができない</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>身寄りのない親族の財産整理に困っている</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>遺産分割協議がまとまらず連絡も難しい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>遺留分を請求できるか知りたい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>借金を相続放棄したい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>家族間の争いを避ける遺言書を作成したい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>遺産分割調停を申し立てたい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>不当な財産使い込みを訴えたい</p>
+    </div>
+    <div class="concern-card fade-in">
+      <div class="concern-check">✓</div>
+      <p>複雑な相続問題の解決策を見つけたい</p>
+    </div>
+  </div>
 </section>
 
-<section id="access" style="background: white; padding: 80px 0;">
-    <div class="container">
-        <h2 class="section-title">アクセス</h2>
-        <div class="info-card">
-            <p><strong>所在地：</strong>〒407-0023 山梨県韮崎市本町1-8-18</p>
-            <p><strong>最寄駅：</strong>JR中央本線「韮崎駅」から徒歩6分</p>
-            <p><strong>駐車場：</strong>事務所入り口前に<strong>8台分</strong>の広いスペースあり</p>
-            <div style="margin-top: 25px; border-radius: 10px; overflow: hidden;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.331215167733!2d138.448557!3d35.701198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601be92d47f9c21b%3A0xc3f605f66144ed01!2z44Gr44KJ44GV44GN5rOV5b6L5LqL5YuZ5omA!5e0!3m2!1sja!2sjp!4v1713456789012!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
+<!-- PROFILE -->
+<section class="profile" id="profile">
+  <div class="profile-visual fade-in">
+    <div class="profile-img-wrap">
+      <div class="profile-img-inner"></div>
     </div>
+    <div class="profile-card">
+      <div class="years">17</div>
+      <div class="years-label">年の弁護士経験</div>
+    </div>
+  </div>
+  <div class="profile-content">
+    <div class="section-label">Attorney Profile</div>
+    <h2 class="section-title">弁護士紹介</h2>
+    <div class="lawyer-name">
+      <span>Attorney</span>
+      江口 伸介
+    </div>
+    <div class="lawyer-sub">
+      弁護士登録番号 40093 ／ 山梨県弁護士会所属
+    </div>
+    <p>相続の問題は、法律的なことだけでなく、ご家族の感情が複雑に絡み合うデリケートなものです。だからこそ、まずご相談者さまのお話をじっくりと伺うことを何よりも大切にしています。</p>
+    <p>多くの方から「丁寧に話を聞いてもらえて気持ちが楽になった」とのお言葉をいただきます。弁護士に相談するのは勇気がいるかもしれませんが、どうかご安心ください。</p>
+    <div class="profile-stats">
+      <div class="stat-box">
+        <div class="stat-val">無料</div>
+        <div class="stat-label">初回面談相談料</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">対応可</div>
+        <div class="stat-label">平日夜間・オンライン</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- FEES -->
+<section class="fees" id="fees">
+  <div class="section-label fade-in">Fee Structure</div>
+  <h2 class="section-title fade-in">料金のご案内</h2>
+  <div class="fees-grid">
+    <div class="fee-card fade-in">
+      <div class="fee-type">初回相談料</div>
+      <div class="fee-amount">0<span>円</span></div>
+      <div class="fee-note">費用のことは心配されずにご来所ください。弁護士がじっくりとお話を伺ったうえ、今後の方針をアドバイスさせていただきます。</div>
+    </div>
+    <div class="fee-card fade-in">
+      <div class="fee-type">2回目以降の相談料</div>
+      <div class="fee-amount">11,000<span>円〜 / 回</span></div>
+      <div class="fee-note">2回目以降は1回11,000円（税込）。30分程度以内で終了した場合は5,500円（税込）となります。</div>
+    </div>
+    <div class="fee-card fade-in">
+      <div class="fee-type">着手金・報酬金</div>
+      <div class="fee-amount">要<span>見積</span></div>
+      <div class="fee-note">事案の内容や難易度により個別にお見積りします。初回相談時に費用の目安をご説明しますのでご安心ください。</div>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem; font-size:0.78rem; color:var(--ink-light); letter-spacing:0.05em;">※ 表示料金はすべて税込金額です。</p>
+</section>
+
+<!-- INFO -->
+<section class="info" id="info">
+  <div class="section-label fade-in">Office Information</div>
+  <h2 class="section-title fade-in">事務所情報・アクセス</h2>
+  <div class="info-grid">
+    <div class="fade-in">
+      <table class="info-table">
+        <tr><td>事務所名</td><td>にらさき法律事務所</td></tr>
+        <tr><td>弁護士</td><td>江口 伸介</td></tr>
+        <tr><td>所属弁護士会</td><td>山梨県弁護士会</td></tr>
+        <tr><td>住所</td><td>〒407-0024<br>山梨県韮崎市本町1-8-18</td></tr>
+        <tr><td>最寄駅</td><td>JR中央本線 韮崎駅（徒歩6分）</td></tr>
+        <tr><td>駐車場</td><td>事務所前に駐車スペースあり</td></tr>
+        <tr><td>営業時間</td><td>平日 9:15〜18:00<br>（夜間は予約により19:30頃まで対応）</td></tr>
+        <tr><td>対応地域</td><td>山梨県全域（北杜市・韮崎市・甲斐市・南アルプス市ほか）</td></tr>
+      </table>
+    </div>
+    <div class="map-placeholder fade-in">
+      <div class="map-inner">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.1!2d138.4497!3d35.7142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c5b6e2b6b2a2f%3A0x1234!2z5bGx5bqr5biC5pys55S677yR77yI77yR77yI!5e0!3m2!1sja!2sjp!4v1234567890"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label fade-in">Contact</div>
+  <h2 class="section-title fade-in">まずはお気軽に<br>ご相談ください</h2>
+  <p class="contact-sub fade-in">
+    「こんなことを弁護士に相談していいのだろうか」と悩まれる前に、<br>
+    お気軽にお話しください。初回のご相談は無料です。
+  </p>
+  <div class="contact-options fade-in">
+    <a href="tel:0505284938" class="contact-card">
+      <div class="c-icon">☎</div>
+      <h3>お電話でのご相談</h3>
+      <p>050-5284-9388<br>平日 9:15〜18:00<br>（夜間は要予約）</p>
+    </a>
+    <a href="mailto:info@nirasaki-law.jp" class="contact-card">
+      <div class="c-icon">✉</div>
+      <h3>メールでのご相談</h3>
+      <p>24時間受信中<br>お問い合わせフォームより<br>お気軽にどうぞ</p>
+    </a>
+    <a href="#" class="contact-card">
+      <div class="c-icon">🎥</div>
+      <h3>オンライン相談</h3>
+      <p>Zoom等を使用した<br>ビデオ通話でのご相談<br>にも対応しています</p>
+    </a>
+  </div>
+  <p class="contact-free-note fade-in">※ 初回面談相談料は無料です。費用の心配なくご相談いただけます。</p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <div class="container">
-        <p style="font-weight: bold; color: var(--primary);">にらさき法律事務所</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">山梨県弁護士会所属 弁護士 江口伸介（登録番号 40093）</p>
-        <p style="font-size: 0.8rem; opacity: 0.5;">© 2026 Nirasaki Law Office</p>
-    </div>
+  <div class="footer-logo">にらさき法律事務所</div>
+  <div>© 2024 Nirasaki Law Office. All rights reserved.</div>
 </footer>
 
+<script>
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Stagger feature items
+  document.querySelectorAll('.feature-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.1}s`;
+  });
+  document.querySelectorAll('.concern-card').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.06}s`;
+  });
+</script>
 </body>
 </html>

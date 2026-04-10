@@ -740,54 +740,6 @@
       <p>Zoom等を使用した<br>ビデオ通話でのご相談<br>にも対応しています</p>
     </a>
   </div>
-
-  <!-- メールフォーム -->
-  <div class="mail-form-wrap fade-in">
-    <div class="mail-form-header">
-      <div class="section-label" style="justify-content:flex-start; margin-bottom:0.5rem;">お問い合わせフォーム</div>
-      <p style="font-size:0.82rem; color:rgba(250,247,242,0.55); line-height:1.8;">下記フォームにご入力いただくと、<code>eguchi@nirasaki-law-office.com</code> 宛にメールが届きます。</p>
-    </div>
-    <div class="mail-form" id="mailForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label>お名前 <span class="req">必須</span></label>
-          <input type="text" id="f-name" placeholder="山田 太郎">
-        </div>
-        <div class="form-group">
-          <label>電話番号</label>
-          <input type="tel" id="f-tel" placeholder="090-0000-0000">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>メールアドレス <span class="req">必須</span></label>
-        <input type="email" id="f-email" placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label>ご相談の種類</label>
-        <select id="f-type">
-          <option value="">選択してください</option>
-          <option>遺産分割</option>
-          <option>相続放棄</option>
-          <option>遺言書作成</option>
-          <option>遺留分請求</option>
-          <option>相続登記</option>
-          <option>不在者財産管理</option>
-          <option>その他</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>ご相談内容 <span class="req">必須</span></label>
-        <textarea id="f-msg" rows="5" placeholder="お気軽にご記入ください。どんな些細なことでも構いません。"></textarea>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" id="f-agree">
-        <label for="f-agree">個人情報の取り扱いに同意します</label>
-      </div>
-      <button class="btn-submit" onclick="submitForm()">送信する →</button>
-      <div id="form-msg" class="form-feedback"></div>
-    </div>
-  </div>
-
   <p class="contact-free-note fade-in">※ 初回面談相談料は無料です。費用の心配なくご相談いただけます。</p>
 </section>
 
@@ -797,49 +749,7 @@
   <div>© 2024 Nirasaki Law Office. All rights reserved.</div>
 </footer>
 
-<style>
-/* ─── MAIL FORM ─── */
-.mail-form-wrap {
-  margin-top: 4rem; background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(184,147,90,0.3);
-  padding: 3rem; max-width: 780px; margin-left: auto; margin-right: auto;
-  margin-top: 4rem;
-}
-.mail-form-header { margin-bottom: 2rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.2rem; }
-.form-group label { font-size: 0.78rem; letter-spacing: 0.1em; color: rgba(250,247,242,0.7); }
-.req { color: var(--gold); font-size: 0.7rem; margin-left: 0.3rem; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(184,147,90,0.25);
-  color: var(--cream); padding: 0.85rem 1rem; font-family: 'Noto Serif JP', serif;
-  font-size: 0.88rem; outline: none; resize: vertical;
-  transition: border-color 0.3s;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus { border-color: var(--gold); }
-.form-group select option { background: #1a1410; color: var(--cream); }
-.form-check { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1.5rem; }
-.form-check input { width: 16px; height: 16px; accent-color: var(--gold); }
-.form-check label { font-size: 0.78rem; color: rgba(250,247,242,0.55); cursor: pointer; }
-.btn-submit {
-  background: var(--gold); color: var(--ink);
-  border: none; padding: 1rem 3rem;
-  font-family: 'Noto Serif JP', serif; font-size: 0.88rem;
-  letter-spacing: 0.15em; cursor: pointer; transition: all 0.3s;
-  display: block; width: 100%;
-}
-.btn-submit:hover { background: var(--gold-light); }
-.form-feedback { margin-top: 1rem; font-size: 0.82rem; text-align: center; min-height: 1.5rem; }
-.form-feedback.ok { color: #7ec8a0; }
-.form-feedback.err { color: #e07070; }
-@media(max-width:600px){ .form-row { grid-template-columns: 1fr; } }
-</style>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Intersection Observer for fade-in animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -858,57 +768,6 @@
   document.querySelectorAll('.concern-card').forEach((el, i) => {
     el.style.transitionDelay = `${i * 0.06}s`;
   });
-
-  // ─── Formspree メール送信 ───
-  async function submitForm() {
-    const name  = document.getElementById('f-name').value.trim();
-    const email = document.getElementById('f-email').value.trim();
-    const msg   = document.getElementById('f-msg').value.trim();
-    const agree = document.getElementById('f-agree').checked;
-    const fb    = document.getElementById('form-msg');
-
-    if (!name || !email || !msg) {
-      fb.textContent = '※ お名前・メールアドレス・ご相談内容は必須です。';
-      fb.className = 'form-feedback err'; return;
-    }
-    if (!agree) {
-      fb.textContent = '※ 個人情報の取り扱いへの同意が必要です。';
-      fb.className = 'form-feedback err'; return;
-    }
-
-    const btn = document.querySelector('.btn-submit');
-    btn.textContent = '送信中...'; btn.disabled = true;
-
-    const payload = {
-      name:     name,
-      email:    email,
-      tel:      document.getElementById('f-tel').value.trim() || '未記入',
-      type:     document.getElementById('f-type').value || '未選択',
-      message:  msg,
-      _subject: '【にらさき法律事務所】お問い合わせ'
-    };
-
-    try {
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if (res.ok) {
-        fb.textContent = '✓ 送信が完了しました。2〜3営業日以内にご連絡いたします。';
-        fb.className = 'form-feedback ok';
-        ['f-name','f-email','f-tel','f-msg'].forEach(id => document.getElementById(id).value = '');
-        document.getElementById('f-type').value = '';
-        document.getElementById('f-agree').checked = false;
-      } else {
-        throw new Error();
-      }
-    } catch(e) {
-      fb.textContent = '※ 送信に失敗しました。お手数ですがお電話（050-5284-9388）にてご連絡ください。';
-      fb.className = 'form-feedback err';
-    }
-    btn.textContent = '送信する →'; btn.disabled = false;
-  }
 </script>
 </body>
 </html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>相続・遺産分割｜にらさき法律事務所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brown-deep:#3b2010;
+    --brown:#5c3317;
+    --brown-mid:#7a4520;
+    --orange:#c8621a;
+    --orange-light:#e08040;
+    --orange-pale:#f5c89a;
+    --cream:#fdf6ee;
+    --parchment:#f3e8d8;
+    --border:#d9b98a;
+    --shadow:rgba(59,32,16,0.10);
+    --text:#3b2010;
+    --text-mid:#6b4020;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Serif JP',serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+
+  /* NAV */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    background:rgba(253,246,238,0.94);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:68px;
+  }
+  .nav-logo{font-family:'Shippori Mincho',serif;font-size:1.05rem;font-weight:700;color:var(--brown-deep);letter-spacing:0.1em;text-decoration:none;}
+  .nav-logo span{color:var(--orange);}
+  .nav-links{display:flex;gap:2rem;list-style:none;}
+  .nav-links a{font-size:0.77rem;letter-spacing:0.12em;color:var(--text-mid);text-decoration:none;transition:color 0.3s;}
+  .nav-links a:hover{color:var(--orange);}
+  .nav-cta{background:var(--orange);color:var(--cream)!important;padding:0.5rem 1.2rem;border-radius:2px;font-size:0.74rem!important;transition:background 0.3s!important;}
+  .nav-cta:hover{background:var(--brown)!important;}
+
+  /* HERO */
+  .page-hero{
+    min-height:56vh;padding-top:68px;
+    background:var(--brown-deep);
+    display:flex;flex-direction:column;justify-content:center;
+    padding-left:8vw;padding-right:8vw;
+    position:relative;overflow:hidden;
+  }
+  .page-hero::before{
+    content:'相続';position:absolute;
+    font-family:'Shippori Mincho',serif;font-size:32vw;font-weight:700;
+    color:rgba(255,255,255,0.04);
+    top:50%;right:-5vw;transform:translateY(-50%);
+    pointer-events:none;letter-spacing:-0.05em;
+  }
+  .page-hero-label{
+    font-family:'Cormorant Garamond',serif;
+    font-size:0.82rem;letter-spacing:0.42em;color:var(--orange-pale);
+    text-transform:uppercase;margin-bottom:1.6rem;
+    display:flex;align-items:center;gap:1rem;
+  }
+  .page-hero-label::before{content:'';width:34px;height:1px;background:var(--orange-light);}
+  .page-hero h1{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(2.4rem,5vw,4rem);font-weight:500;
+    line-height:1.35;color:var(--cream);letter-spacing:0.06em;
+    margin-bottom:1.4rem;
+  }
+  .page-hero h1 em{display:block;font-style:normal;color:var(--orange-light);font-size:0.52em;letter-spacing:0.2em;margin-bottom:0.3rem;}
+  .page-hero-sub{font-size:1rem;line-height:2;color:rgba(253,246,238,0.65);max-width:560px;margin-bottom:2.2rem;}
+  .page-hero-badges{display:flex;gap:0.8rem;flex-wrap:wrap;}
+  .badge-dark{border:1px solid rgba(200,98,26,0.5);color:var(--orange-pale);padding:0.38rem 1rem;font-size:0.72rem;letter-spacing:0.1em;border-radius:2px;}
+
+  /* SECTION BASE */
+  section{padding:6rem 8vw;}
+  .section-label{
+    font-family:'Cormorant Garamond',serif;font-size:0.78rem;letter-spacing:0.42em;color:var(--orange);
+    text-transform:uppercase;margin-bottom:1.1rem;display:flex;align-items:center;gap:1rem;
+  }
+  .section-label::after{content:'';flex:1;height:1px;background:var(--border);max-width:56px;}
+  .section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.65rem,2.7vw,2.5rem);font-weight:500;line-height:1.45;letter-spacing:0.05em;color:var(--brown-deep);}
+
+  /* INTRO */
+  .intro{background:var(--parchment);}
+  .intro-grid{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+  .intro-text p{font-size:0.9rem;line-height:2.1;color:var(--text-mid);margin-bottom:1.1rem;}
+  .intro-text p strong{color:var(--brown-deep);}
+  .intro-points{display:flex;flex-direction:column;gap:0;}
+  .intro-point{
+    padding:1.4rem 0;border-bottom:1px solid var(--border);
+    display:flex;align-items:flex-start;gap:1rem;
+  }
+  .intro-point:first-child{border-top:1px solid var(--border);}
+  .intro-point-icon{
+    width:36px;height:36px;flex-shrink:0;
+    background:var(--orange);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-size:0.85rem;
+  }
+  .intro-point-text h4{font-size:0.93rem;font-weight:700;color:var(--brown-deep);margin-bottom:0.3rem;}
+  .intro-point-text p{font-size:0.82rem;line-height:1.8;color:var(--text-mid);}
+
+  /* INTERVIEW */
+  .interview{background:var(--cream);}
+  .interview-grid{margin-top:2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+  .interview-block{border-left:3px solid var(--orange);padding:1.8rem 2rem;background:var(--parchment);}
+  .interview-q{font-family:'Shippori Mincho',serif;font-size:1rem;font-weight:700;color:var(--orange);margin-bottom:0.9rem;line-height:1.5;}
+  .interview-q::before{content:'Q. ';}
+  .interview-a{font-size:0.86rem;line-height:2.05;color:var(--text-mid);}
+  .interview-a strong{color:var(--brown-deep);}
+
+  /* CONCERNS */
+  .concerns{background:var(--brown-deep);color:var(--cream);}
+  .concerns .section-label{color:var(--orange-pale);}
+  .concerns .section-label::after{background:rgba(255,255,255,0.15);}
+  .concerns .section-title{color:var(--cream);}
+  .concerns-grid{margin-top:2.8rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;}
+  .concern-card{border:1px solid rgba(200,98,26,0.35);padding:1.5rem 1.7rem;display:flex;align-items:flex-start;gap:0.9rem;transition:all 0.3s;position:relative;overflow:hidden;}
+  .concern-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,98,26,0.07) 0%,transparent 100%);opacity:0;transition:opacity 0.3s;}
+  .concern-card:hover{border-color:var(--orange-light);}
+  .concern-card:hover::before{opacity:1;}
+  .concern-check{width:22px;height:22px;flex-shrink:0;border:1px solid var(--orange-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--orange-light);font-size:0.62rem;margin-top:2px;}
+  .concern-card p{font-size:0.85rem;line-height:1.75;color:rgba(253,246,238,0.87);}
+
+  /* CASES */
+  .cases{background:var(--parchment);}
+  .cases-grid{margin-top:2.8rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.8rem;}
+  .case-card{background:var(--cream);border:1px solid var(--border);padding:2rem;transition:all 0.3s;}
+  .case-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow);}
+  .case-tag{display:inline-block;background:var(--orange);color:var(--cream);font-size:0.67rem;letter-spacing:0.12em;padding:0.28rem 0.75rem;margin-bottom:1rem;}
+  .case-title{font-family:'Shippori Mincho',serif;font-size:0.98rem;font-weight:700;color:var(--brown-deep);margin-bottom:0.8rem;line-height:1.55;}
+  .case-body{font-size:0.83rem;line-height:1.9;color:var(--text-mid);}
+  .case-result{margin-top:1rem;padding-top:0.9rem;border-top:1px solid var(--border);font-size:0.79rem;color:var(--orange);letter-spacing:0.05em;}
+  .case-result::before{content:'解決結果 → ';}
+
+  /* SPECIALIST */
+  .specialist{background:var(--cream);}
+  .specialist-grid{margin-top:2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+  .spec-card{padding:2rem;border:1px solid var(--border);background:var(--parchment);}
+  .spec-icon{font-size:1.6rem;margin-bottom:1rem;color:var(--orange);}
+  .spec-title{font-family:'Shippori Mincho',serif;font-size:1.05rem;font-weight:700;color:var(--brown-deep);margin-bottom:0.8rem;}
+  .spec-body{font-size:0.84rem;line-height:2;color:var(--text-mid);}
+
+  /* FEES */
+  .fees{background:var(--parchment);}
+  .fees-grid{margin-top:2.8rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;border:1px solid var(--border);}
+  .fee-card{background:var(--cream);padding:2.6rem 2.2rem;border-right:1px solid var(--border);}
+  .fee-card:last-child{border-right:none;}
+  .fee-type{font-size:0.72rem;letter-spacing:0.2em;color:var(--orange);margin-bottom:1.2rem;text-transform:uppercase;}
+  .fee-amount{font-family:'DM Serif Display',serif;font-size:2.7rem;line-height:1;margin-bottom:0.4rem;color:var(--brown-deep);}
+  .fee-amount span{font-size:1rem;font-family:'Noto Serif JP',serif;}
+  .fee-note{font-size:0.8rem;line-height:1.85;color:var(--text-mid);margin-top:1rem;}
+
+  /* CONTACT */
+  .contact{background:var(--brown-deep);color:var(--cream);text-align:center;padding:5rem 8vw;position:relative;overflow:hidden;}
+  .contact::before{content:'律';position:absolute;font-family:'Shippori Mincho',serif;font-size:28vw;font-weight:700;color:rgba(255,255,255,0.025);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+  .contact .section-label{justify-content:center;color:var(--orange-pale);}
+  .contact .section-label::after,.contact .section-label::before{content:'';width:34px;height:1px;background:var(--orange-light);}
+  .contact .section-title{color:var(--cream);margin-bottom:0.9rem;}
+  .contact-sub{color:rgba(253,246,238,0.58);font-size:0.9rem;line-height:1.95;margin-bottom:2.6rem;}
+  .contact-options{display:flex;gap:1.8rem;justify-content:center;flex-wrap:wrap;}
+  .contact-card{border:1px solid rgba(200,98,26,0.42);padding:2.2rem 2.6rem;flex:1;max-width:295px;transition:all 0.3s;text-decoration:none;color:var(--cream);display:block;}
+  .contact-card:hover{border-color:var(--orange-light);background:rgba(200,98,26,0.1);}
+  .contact-card .c-icon{font-size:1.4rem;margin-bottom:0.9rem;color:var(--orange-light);}
+  .contact-card h3{font-family:'Shippori Mincho',serif;font-size:1.03rem;margin-bottom:0.5rem;}
+  .contact-card p{font-size:0.75rem;color:rgba(253,246,238,0.55);line-height:1.75;}
+  .contact-free-note{margin-top:2.2rem;font-size:0.75rem;color:rgba(253,246,238,0.38);letter-spacing:0.1em;}
+
+  /* FOOTER */
+  footer{background:#22100a;color:rgba(253,246,238,0.38);padding:2.2rem 8vw;display:flex;align-items:center;justify-content:space-between;font-size:0.72rem;letter-spacing:0.1em;}
+  footer .footer-logo{font-family:'Shippori Mincho',serif;font-size:0.96rem;color:rgba(253,246,238,0.68);letter-spacing:0.1em;}
+  footer a{color:var(--orange-light);text-decoration:none;margin-left:1.2rem;}
+  footer a:hover{color:var(--orange-pale);}
+
+  /* ANIMATIONS */
+  .fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.8s ease,transform 0.8s ease;}
+  .fade-in.visible{opacity:1;transform:translateY(0);}
+
+  /* RESPONSIVE */
+  @media(max-width:960px){
+    nav{padding:0 1.5rem;}
+    .nav-links{display:none;}
+    .intro-grid,.interview-grid,.specialist-grid{grid-template-columns:1fr;}
+    section{padding:4.5rem 6vw;}
+    .fee-card{border-right:none;border-bottom:1px solid var(--border);}
+    footer{flex-direction:column;gap:1rem;text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><span>に</span>らさき法律事務所</a>
+  <ul class="nav-links">
+    <li><a href="#intro">相続とは</a></li>
+    <li><a href="#interview">インタビュー</a></li>
+    <li><a href="#concerns">お悩み</a></li>
+    <li><a href="#cases">解決事例</a></li>
+    <li><a href="#specialist">専門対応</a></li>
+    <li><a href="#fees">料金</a></li>
+    <li><a href="index.html">← トップへ</a></li>
+    <li><a href="#contact" class="nav-cta">無料相談</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-label">Inheritance & Estate Law</div>
+  <h1>
+    <em>にらさき法律事務所 — 相続専門ページ</em>
+    複雑な相続も、<br>円満解決へ導きます。
+  </h1>
+  <p class="page-hero-sub">
+    多数の相続人・行方不明者・複雑な不動産——どんな難題も「何とかなる」の信念で粘り強く対応。
+    初回相談無料。韮崎駅から徒歩6分。
+  </p>
+  <div class="page-hero-badges">
+    <span class="badge-dark">初回相談 無料</span>
+    <span class="badge-dark">平日夜間対応可</span>
+    <span class="badge-dark">オンライン相談可</span>
+    <span class="badge-dark">司法書士・税理士と連携</span>
+    <span class="badge-dark">2024年相続登記義務化対応</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="section-label fade-in">About Inheritance</div>
+  <h2 class="section-title fade-in">当事務所が選ばれる理由</h2>
+  <div class="intro-grid">
+    <div class="intro-text fade-in">
+      <p>相続の問題は、法律的なことだけでなく、<strong>ご家族の感情が複雑に絡み合うデリケートなもの</strong>です。だからこそ、当事務所では、まずご相談者さまのお話をじっくりと伺うことを何よりも大切にしています。</p>
+      <p>打ち合わせに<strong>2時間ほどお時間をいただく</strong>ことも珍しくありません。それは、ご相談者さまが抱えている不安や、本当はどうしたいのかというお気持ちを、深く理解するためです。</p>
+      <p>多くの方から「<strong>丁寧に話を聞いてもらえて気持ちが楽になった</strong>」とのお言葉をいただきます。弁護士に相談するのは勇気がいるかもしれませんが、どうかご安心ください。</p>
+      <p>当事務所は、北杜市、韮崎市、甲斐市、南アルプス市をはじめ、長野県の一部地域からもご相談をいただいています。<strong>相続登記は2024年4月から義務化</strong>されました。放置するリスクは増えています。ぜひ早めにご相談ください。</p>
+    </div>
+    <div class="intro-points fade-in">
+      <div class="intro-point">
+        <div class="intro-point-icon">①</div>
+        <div class="intro-point-text">
+          <h4>じっくりお話を伺います</h4>
+          <p>2時間以上かけて丁寧に状況を整理。ご家族の感情にも寄り添います。</p>
+        </div>
+      </div>
+      <div class="intro-point">
+        <div class="intro-point-icon">②</div>
+        <div class="intro-point-text">
+          <h4>複雑案件に豊富な解決実績</h4>
+          <p>相続人30名超・行方不明者・放置された不動産など難題も対応可能。</p>
+        </div>
+      </div>
+      <div class="intro-point">
+        <div class="intro-point-icon">③</div>
+        <div class="intro-point-text">
+          <h4>司法書士・税理士と連携</h4>
+          <p>登記・税務申告までワンストップ。あちこち訪ねる手間がかかりません。</p>
+        </div>
+      </div>
+      <div class="intro-point">
+        <div class="intro-point-icon">④</div>
+        <div class="intro-point-text">
+          <h4>「何とかなる」の信念で粘り強く</h4>
+          <p>ご依頼案件のほとんどを最終解決まで見届けてきました。諦めません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW -->
+<section class="interview" id="interview">
+  <div class="section-label fade-in">Interview</div>
+  <h2 class="section-title fade-in">事務所詳細インタビュー</h2>
+  <div class="interview-grid">
+    <div class="interview-block fade-in">
+      <div class="interview-q">事務所の強みを一言で言うと？</div>
+      <div class="interview-a">複雑な相続も◎円満解決へ導くことです。多数の相続人・行方不明者がいるケースも解決実績豊富。<strong>「何とかなる」</strong>をモットーに、どんな難題も粘り強く対応します。大切なご家族の「すっきりした」笑顔のために全力でサポートします。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">相談者への向き合い方を教えてください</div>
+      <div class="interview-a">相続の問題は法律だけでなく、感情が複雑に絡み合うもの。だからこそ<strong>まずお話をじっくり伺う</strong>ことを大切にしています。打ち合わせに2時間ほどいただくことも。それは相談者さまの本当のお気持ちを深く理解するためです。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">複雑な相続案件はどう解決しますか？</div>
+      <div class="interview-a">曽祖父の代から登記が手つかずで<strong>相続人が何十人にも膨れ上がっている</strong>ケースも扱います。粘り強くお手紙を送ったり、遺産分割調停を申し立てたりと、豊富な経験に基づいて解決へ導きます。諦めないでください。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">行方不明者がいる場合はどうなりますか？</div>
+      <div class="interview-a">裁判所への<strong>「不在者財産管理人」</strong>選任申立てに対応しています。また相続人が誰もいない場合の<strong>「相続財産清算人」</strong>選任、遺言無効確認訴訟、財産使い込みの問題にも日常的に対応しています。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">費用の目安を教えてください</div>
+      <div class="interview-a"><strong>初回相談は完全無料</strong>。2回目以降は11,000円/回（税込）。着手金・報酬金は事案により個別にご説明します。まず費用の心配なくお越しください。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">相続登記義務化について教えてください</div>
+      <div class="interview-a"><strong>2024年4月から相続登記が義務化</strong>されました。放置するリスクは増えています。「本当にすっきりした」と安堵される依頼者さまの笑顔が、私の何よりの喜びです。早めのご相談をおすすめします。</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCERNS -->
+<section class="concerns" id="concerns">
+  <div class="section-label fade-in">Concerns We Solve</div>
+  <h2 class="section-title fade-in">こんなお悩み<br>お任せください</h2>
+  <div class="concerns-grid">
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>多数の相続人で登記が進まず困っている</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>行方不明の相続人がいて遺産分割ができない</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>身寄りのない親族の財産整理に困っている</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺産分割協議がまとまらず連絡も難しい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺留分を請求できるか知りたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>借金を相続放棄したい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>家族間の争いを避ける遺言書を作成したい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺産分割調停を申し立てたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>不当な財産使い込みを訴えたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>複雑な相続問題の解決策を見つけたい</p></div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="section-label fade-in">Case Studies</div>
+  <h2 class="section-title fade-in">解決事例</h2>
+  <div class="cases-grid">
+    <div class="case-card fade-in">
+      <span class="case-tag">遺産分割・多数相続人</span>
+      <div class="case-title">曽祖父の代から放置された不動産、相続人30名超の遺産分割</div>
+      <div class="case-body">相続登記が何十年も手つかずになっており、相続人が膨大な人数に。相続人全員から実印をもらうことは困難な状況でした。粘り強くお手紙を送り続け、遺産分割調停を申し立てることで解決しました。</div>
+      <div class="case-result">遺産分割協議成立・相続登記完了</div>
+    </div>
+    <div class="case-card fade-in">
+      <span class="case-tag">不在者財産管理</span>
+      <div class="case-title">行方不明の相続人がいて手続きが進まないケース</div>
+      <div class="case-body">相続人の一人が長年行方不明で連絡が取れず、遺産分割の手続きが進められない状態でした。裁判所に「不在者財産管理人」の選任を申し立て、法的に手続きを進める道筋をつけました。</div>
+      <div class="case-result">不在者財産管理人選任→遺産分割協議成立</div>
+    </div>
+    <div class="case-card fade-in">
+      <span class="case-tag">相続財産清算</span>
+      <div class="case-title">身寄りのない親族の財産整理</div>
+      <div class="case-body">亡くなった方にご家族がおらず相続人が誰もいないケース。「相続財産清算人」の選任申立てを行い、財産を適切に整理しました。</div>
+      <div class="case-result">相続財産清算人選任→財産整理完了</div>
+    </div>
+    <div class="case-card fade-in">
+      <span class="case-tag">遺言無効確認訴訟</span>
+      <div class="case-title">遺言書の有効性に疑問があるケース</div>
+      <div class="case-body">遺言書の作成時の意思能力や手続きに問題があると判断し遺言無効確認訴訟を提起。証拠を丁寧に積み上げ、ご依頼者にとって有利な結果を得ることができました。</div>
+      <div class="case-result">遺言無効確認判決・適正な遺産分割実現</div>
+    </div>
+    <div class="case-card fade-in">
+      <span class="case-tag">生前の財産使い込み</span>
+      <div class="case-title">他の相続人が被相続人の預貯金を使い込んでいたケース</div>
+      <div class="case-body">被相続人の生前に他の相続人が多額の預貯金を引き出していたことが発覚。入出金履歴や医療記録をもとに使い込みを立証し、不当利得返還請求を行いました。</div>
+      <div class="case-result">使い込み分の返還合意・適正な遺産分割実現</div>
+    </div>
+    <div class="case-card fade-in">
+      <span class="case-tag">相続放棄</span>
+      <div class="case-title">多額の借金を残して亡くなった親の相続放棄</div>
+      <div class="case-body">多額の借金が発覚。相続放棄の期限（3ヶ月）が迫るなかご相談を受け、即座に手続きを開始。期限内に家庭裁判所への申述が完了し、借金の相続を回避できました。</div>
+      <div class="case-result">相続放棄申述受理・借金承継を回避</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALIST -->
+<section class="specialist" id="specialist">
+  <div class="section-label fade-in">Specialized Services</div>
+  <h2 class="section-title fade-in">専門的な相続手続きにも対応</h2>
+  <div class="specialist-grid">
+    <div class="spec-card fade-in">
+      <div class="spec-icon">🔍</div>
+      <div class="spec-title">不在者財産管理人の選任</div>
+      <div class="spec-body">相続人の中に行方不明の方がいて手続きが進められない場合、裁判所に「不在者財産管理人」の選任を申し立てます。行方不明の相続人の代わりに遺産分割協議に参加できるよう手続きを進めます。</div>
+    </div>
+    <div class="spec-card fade-in">
+      <div class="spec-icon">⚖</div>
+      <div class="spec-title">相続財産清算人の選任</div>
+      <div class="spec-body">亡くなった方にご家族がおらず相続人が誰もいない場合、「相続財産清算人」の選任申立てを行います。財産を適切に管理・清算し、債権者への弁済や国庫帰属の手続きを進めます。</div>
+    </div>
+    <div class="spec-card fade-in">
+      <div class="spec-icon">📋</div>
+      <div class="spec-title">遺言無効確認訴訟</div>
+      <div class="spec-body">「遺言書の内容に納得がいかない」「作成時に意思能力があったか疑わしい」という場合の遺言無効確認訴訟に対応します。証拠収集から訴訟対応まで丁寧にサポートします。</div>
+    </div>
+    <div class="spec-card fade-in">
+      <div class="spec-icon">💼</div>
+      <div class="spec-title">生前の財産使い込み請求</div>
+      <div class="spec-body">被相続人の生前に他の相続人等が預貯金を無断で引き出していた場合の不当利得返還請求に対応。入出金記録や医療記録を精査し、使い込みを立証します。</div>
+    </div>
+    <div class="spec-card fade-in">
+      <div class="spec-icon">🏠</div>
+      <div class="spec-title">相続登記・不動産の名義変更</div>
+      <div class="spec-body">不動産の名義変更（相続登記）には司法書士の力が必要です。当事務所は日頃から韮崎市・北杜市周辺の司法書士と緊密に連携し、スムーズな相続登記をサポートします。2024年4月から義務化されました。</div>
+    </div>
+    <div class="spec-card fade-in">
+      <div class="spec-icon">🧾</div>
+      <div class="spec-title">相続税申告・税理士との連携</div>
+      <div class="spec-body">相続税の申告には税理士の力が必要です。当事務所は地域の税理士事務所と連携し、弁護士が窓口となってワンストップでサポート。税務申告まで一括対応します。</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="fees" id="fees">
+  <div class="section-label fade-in">Fee Structure</div>
+  <h2 class="section-title fade-in">料金のご案内</h2>
+  <div class="fees-grid">
+    <div class="fee-card fade-in">
+      <div class="fee-type">初回相談料</div>
+      <div class="fee-amount">0<span>円</span></div>
+      <div class="fee-note">費用のことは心配されずにご来所ください。弁護士がじっくりとお話を伺い、今後の方針をアドバイスします。</div>
+    </div>
+    <div class="fee-card fade-in">
+      <div class="fee-type">2回目以降の相談料</div>
+      <div class="fee-amount">11,000<span>円〜/回</span></div>
+      <div class="fee-note">1回11,000円（税込）。30分程度以内で終了した場合は5,500円（税込）となります。</div>
+    </div>
+    <div class="fee-card fade-in">
+      <div class="fee-type">着手金・報酬金</div>
+      <div class="fee-amount">要<span>見積</span></div>
+      <div class="fee-note">事案の内容・難易度により個別にご説明します。初回相談時に費用の目安をご案内しますのでご安心ください。</div>
+    </div>
+  </div>
+  <p style="margin-top:1.2rem;font-size:0.75rem;color:var(--text-mid);letter-spacing:0.05em;">※ 表示料金はすべて税込金額です。</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label fade-in">Contact</div>
+  <h2 class="section-title fade-in">まずはお気軽に<br>ご相談ください</h2>
+  <p class="contact-sub fade-in">
+    「こんなことを弁護士に相談していいのだろうか」と悩まれる前に、<br>
+    お気軽にお話しください。初回のご相談は無料です。
+  </p>
+  <div class="contact-options fade-in">
+    <a href="tel:0505284938" class="contact-card">
+      <div class="c-icon">☎</div>
+      <h3>お電話でのご相談</h3>
+      <p>050-5284-9388<br>平日 9:15〜18:00<br>（夜間は要予約）</p>
+    </a>
+    <a href="mailto:eguchi@nirasaki-law-office.com" class="contact-card">
+      <div class="c-icon">✉</div>
+      <h3>メールでのご相談</h3>
+      <p>eguchi@nirasaki-law-office.com<br>24時間受信中</p>
+    </a>
+    <a href="#" class="contact-card">
+      <div class="c-icon">🎥</div>
+      <h3>オンライン相談</h3>
+      <p>Zoom等によるビデオ通話<br>にも対応しています</p>
+    </a>
+  </div>
+  <p class="contact-free-note fade-in">※ 初回面談相談料は無料です。費用の心配なくご相談いただけます。</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">にらさき法律事務所 — 相続専門ページ</div>
+  <div>
+    <a href="index.html">← トップページへ</a>
+    <span style="margin-left:2rem;">© 2024 Nirasaki Law Office. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  },{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.concern-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.06}s`; });
+  document.querySelectorAll('.case-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.08}s`; });
+  document.querySelectorAll('.spec-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.09}s`; });
+</script>
+</body>
+</html>

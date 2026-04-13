@@ -3,453 +3,447 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>にらさき法律事務所 | 相続・遺産分割の弁護士相談</title>
+<title>にらさき法律事務所 | 山梨県韮崎市の弁護士</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1410;
-    --ink-light: #4a3f35;
-    --parchment: #f5f0e8;
-    --cream: #faf7f2;
-    --gold: #b8935a;
-    --gold-light: #d4b483;
-    --rust: #8b4a2f;
-    --sage: #5a6b5a;
-    --border: #d4c8b0;
-    --shadow: rgba(26,20,16,0.08);
+    --brown-deep:  #3b2010;
+    --brown:       #5c3317;
+    --brown-mid:   #7a4520;
+    --orange:      #c8621a;
+    --orange-light:#e08040;
+    --orange-pale: #f5c89a;
+    --cream:       #fdf6ee;
+    --parchment:   #f3e8d8;
+    --border:      #d9b98a;
+    --shadow:      rgba(59,32,16,0.10);
+    --text:        #3b2010;
+    --text-mid:    #6b4020;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Noto Serif JP', serif;
-    background: var(--cream);
-    color: var(--ink);
-    overflow-x: hidden;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Serif JP',serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
   }
 
-  /* ─── NAV ─── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(250,247,242,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 3rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
+  /* ── NAV ── */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    background:rgba(253,246,238,0.93);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    padding:0 3rem;
+    display:flex;align-items:center;justify-content:space-between;
+    height:68px;
   }
-  .nav-logo {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--ink); letter-spacing: 0.1em;
-    text-decoration: none;
+  .nav-logo{
+    font-family:'Shippori Mincho',serif;
+    font-size:1.08rem;font-weight:700;
+    color:var(--brown-deep);letter-spacing:0.1em;
+    text-decoration:none;
   }
-  .nav-logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.8rem; letter-spacing: 0.12em; color: var(--ink-light);
-    text-decoration: none; transition: color 0.3s;
+  .nav-logo span{color:var(--orange);}
+  .nav-links{display:flex;gap:2.2rem;list-style:none;}
+  .nav-links a{
+    font-size:0.78rem;letter-spacing:0.12em;
+    color:var(--text-mid);text-decoration:none;transition:color 0.3s;
   }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta {
-    background: var(--ink); color: var(--cream) !important;
-    padding: 0.55rem 1.4rem; border-radius: 2px;
-    font-size: 0.75rem !important; letter-spacing: 0.15em;
-    transition: background 0.3s !important;
+  .nav-links a:hover{color:var(--orange);}
+  .nav-cta{
+    background:var(--orange);color:var(--cream)!important;
+    padding:0.5rem 1.3rem;border-radius:2px;
+    font-size:0.75rem!important;letter-spacing:0.14em;
+    transition:background 0.3s!important;
   }
-  .nav-cta:hover { background: var(--gold) !important; color: var(--ink) !important; }
+  .nav-cta:hover{background:var(--brown)!important;}
 
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    padding-top: 70px;
-    position: relative; overflow: hidden;
+  /* ── HERO ── */
+  .hero{
+    min-height:100vh;
+    display:grid;grid-template-columns:1fr 1fr;
+    padding-top:68px;
+    position:relative;overflow:hidden;
   }
-  .hero-left {
-    display: flex; flex-direction: column;
-    justify-content: center;
-    padding: 6rem 4rem 6rem 8vw;
-    position: relative; z-index: 2;
+  .hero-left{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:5rem 3.5rem 5rem 8vw;
+    position:relative;z-index:2;
   }
-  .hero-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem; letter-spacing: 0.35em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 2rem;
-    display: flex; align-items: center; gap: 1rem;
+  .hero-eyebrow{
+    font-family:'Cormorant Garamond',serif;
+    font-size:0.82rem;letter-spacing:0.38em;color:var(--orange);
+    text-transform:uppercase;margin-bottom:1.8rem;
+    display:flex;align-items:center;gap:1rem;
   }
-  .hero-eyebrow::before {
-    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  .hero-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--orange);}
+  .hero-title{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(2.6rem,4.5vw,4.2rem);
+    font-weight:500;line-height:1.35;
+    letter-spacing:0.05em;margin-bottom:1.4rem;
+    color:var(--brown-deep);
   }
-  .hero-title {
-    font-family: 'Shippori Mincho', serif;
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
-    font-weight: 500; line-height: 1.3;
-    letter-spacing: 0.05em; margin-bottom: 1.5rem;
+  .hero-title em{
+    font-style:normal;color:var(--orange);
+    display:block;font-size:0.52em;
+    font-weight:400;letter-spacing:0.18em;margin-bottom:0.3rem;
   }
-  .hero-title em {
-    font-style: normal; color: var(--gold);
-    display: block; font-size: 0.55em;
-    font-weight: 400; letter-spacing: 0.15em;
-    margin-bottom: 0.3rem;
+  .hero-sub{
+    font-size:0.97rem;line-height:2.05;color:var(--text-mid);
+    max-width:370px;margin-bottom:2.5rem;
   }
-  .hero-sub {
-    font-size: 1rem; line-height: 2; color: var(--ink-light);
-    max-width: 380px; margin-bottom: 3rem;
+  .hero-badges{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+  .badge{
+    border:1px solid var(--orange);color:var(--orange);
+    padding:0.38rem 1rem;font-size:0.73rem;letter-spacing:0.1em;border-radius:2px;
   }
-  .hero-badges {
-    display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;
+  .hero-cta-group{display:flex;gap:1rem;align-items:center;}
+  .btn-primary{
+    background:var(--orange);color:var(--cream);
+    padding:0.95rem 2.3rem;font-family:'Noto Serif JP',serif;
+    font-size:0.84rem;letter-spacing:0.15em;border:none;
+    cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;
   }
-  .badge {
-    border: 1px solid var(--gold); color: var(--gold);
-    padding: 0.4rem 1rem; font-size: 0.75rem; letter-spacing: 0.1em;
-    border-radius: 2px;
+  .btn-primary:hover{background:var(--brown);transform:translateY(-2px);}
+  .btn-secondary{
+    color:var(--brown-mid);font-size:0.8rem;letter-spacing:0.12em;
+    text-decoration:none;display:flex;align-items:center;gap:0.5rem;
+    border-bottom:1px solid var(--border);padding-bottom:2px;transition:all 0.3s;
   }
-  .hero-cta-group { display: flex; gap: 1rem; align-items: center; }
-  .btn-primary {
-    background: var(--gold); color: var(--cream);
-    padding: 1rem 2.5rem; font-family: 'Noto Serif JP', serif;
-    font-size: 0.85rem; letter-spacing: 0.15em; border: none;
-    cursor: pointer; transition: all 0.3s; text-decoration: none;
-    display: inline-block;
-  }
-  .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
-  .btn-secondary {
-    color: var(--ink); font-size: 0.82rem; letter-spacing: 0.12em;
-    text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
-    border-bottom: 1px solid var(--border); padding-bottom: 2px;
-    transition: all 0.3s;
-  }
-  .btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+  .btn-secondary:hover{color:var(--orange);border-color:var(--orange);}
 
-  .hero-right {
-    position: relative; overflow: hidden;
-    background: var(--parchment);
+  .hero-right{position:relative;overflow:hidden;background:var(--parchment);}
+  .hero-image-grid{
+    position:absolute;inset:0;
+    display:grid;grid-template-rows:1fr 1fr;
   }
-  .hero-image-grid {
-    position: absolute; inset: 0;
-    display: grid; grid-template-rows: 1fr 1fr; gap: 0;
+  .hero-img-main{
+    background:url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center/cover;
+    position:relative;
   }
-  .hero-img-main {
-    background: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center/cover;
-    position: relative;
+  .hero-img-main::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(200,98,26,0.12) 0%,transparent 60%);
   }
-  .hero-img-main::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(184,147,90,0.15) 0%, transparent 60%);
+  .hero-img-sub{display:grid;grid-template-columns:1fr 1fr;}
+  .hero-img-sub div{background-size:cover;background-position:center;}
+  .hero-img-sub div:first-child{
+    background-image:url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/5006ceec19ca4c8391e7ce370609d66a/%E5%86%99%E7%9C%9F%EF%BC%92%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
+    border-right:2px solid var(--cream);
   }
-  .hero-img-sub {
-    display: grid; grid-template-columns: 1fr 1fr;
+  .hero-img-sub div:last-child{
+    background-image:url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/1898d03238d74954a30f901391cb1d58/%E5%86%99%E7%9C%9F%EF%BC%93%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
   }
-  .hero-img-sub div {
-    background-size: cover; background-position: center;
+  .hero-tag{
+    position:absolute;bottom:2rem;left:2rem;
+    background:var(--cream);padding:1.1rem 1.6rem;
+    border-left:3px solid var(--orange);z-index:3;
+    box-shadow:0 8px 30px var(--shadow);
   }
-  .hero-img-sub div:first-child {
-    background-image: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/5006ceec19ca4c8391e7ce370609d66a/%E5%86%99%E7%9C%9F%EF%BC%92%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
-    border-right: 2px solid var(--cream);
+  .hero-tag .tag-num{
+    font-family:'DM Serif Display',serif;font-size:1.9rem;
+    color:var(--orange);line-height:1;
   }
-  .hero-img-sub div:last-child {
-    background-image: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/1898d03238d74954a30f901391cb1d58/%E5%86%99%E7%9C%9F%EF%BC%93%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=360&h=210&fm=webp&auto=compress');
-  }
-  .hero-tag {
-    position: absolute; bottom: 2rem; left: 2rem;
-    background: var(--cream); padding: 1.2rem 1.8rem;
-    border-left: 3px solid var(--gold); z-index: 3;
-    box-shadow: 0 8px 30px var(--shadow);
-  }
-  .hero-tag .tag-num {
-    font-family: 'DM Serif Display', serif; font-size: 2rem;
-    color: var(--gold); line-height: 1;
-  }
-  .hero-tag .tag-label {
-    font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ink-light);
-    margin-top: 0.2rem;
-  }
+  .hero-tag .tag-label{font-size:0.68rem;letter-spacing:0.1em;color:var(--text-mid);margin-top:0.2rem;}
 
-  /* ─── TICKER ─── */
-  .ticker {
-    background: var(--ink); color: var(--cream);
-    padding: 0.9rem 0; overflow: hidden;
-    display: flex; gap: 0; white-space: nowrap;
+  /* ── TICKER ── */
+  .ticker{
+    background:var(--brown-deep);color:var(--cream);
+    padding:0.88rem 0;overflow:hidden;
+    display:flex;white-space:nowrap;
   }
-  .ticker-track {
-    display: flex; gap: 4rem;
-    animation: ticker 25s linear infinite;
-    font-size: 0.78rem; letter-spacing: 0.2em; color: var(--gold-light);
+  .ticker-track{
+    display:flex;gap:4rem;
+    animation:ticker 28s linear infinite;
+    font-size:0.76rem;letter-spacing:0.2em;color:var(--orange-pale);
   }
-  .ticker-track span { display: flex; align-items: center; gap: 1rem; }
-  .ticker-track span::before { content: '◆'; font-size: 0.5rem; color: var(--gold); }
-  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-track span{display:flex;align-items:center;gap:1rem;}
+  .ticker-track span::before{content:'◆';font-size:0.48rem;color:var(--orange-light);}
+  @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-  /* ─── SECTION BASE ─── */
-  section { padding: 7rem 8vw; }
-  .section-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.8rem; letter-spacing: 0.4em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 1.2rem;
-    display: flex; align-items: center; gap: 1rem;
+  /* ── SECTION BASE ── */
+  section{padding:6.5rem 8vw;}
+  .section-label{
+    font-family:'Cormorant Garamond',serif;
+    font-size:0.78rem;letter-spacing:0.42em;color:var(--orange);
+    text-transform:uppercase;margin-bottom:1.1rem;
+    display:flex;align-items:center;gap:1rem;
   }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); max-width: 60px; }
-  .section-title {
-    font-family: 'Shippori Mincho', serif;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    font-weight: 500; line-height: 1.4; letter-spacing: 0.05em;
+  .section-label::after{content:'';flex:1;height:1px;background:var(--border);max-width:56px;}
+  .section-title{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(1.7rem,2.8vw,2.6rem);
+    font-weight:500;line-height:1.45;letter-spacing:0.05em;
+    color:var(--brown-deep);
   }
 
-  /* ─── FEATURES ─── */
-  .features {
-    background: var(--parchment);
-    display: grid; grid-template-columns: 1fr 2fr; gap: 6rem;
-    align-items: start;
+  /* ── FEATURES ── */
+  .features{
+    background:var(--parchment);
+    display:grid;grid-template-columns:1fr 2fr;gap:5.5rem;align-items:start;
   }
-  .features-intro { position: sticky; top: 100px; }
-  .features-intro p {
-    margin-top: 1.5rem; font-size: 0.95rem; line-height: 2;
-    color: var(--ink-light);
+  .features-intro{position:sticky;top:90px;}
+  .features-intro p{margin-top:1.4rem;font-size:0.93rem;line-height:2.05;color:var(--text-mid);}
+  .features-grid{display:flex;flex-direction:column;}
+  .feature-item{
+    padding:2.3rem 0;border-bottom:1px solid var(--border);
+    display:grid;grid-template-columns:72px 1fr;gap:1.8rem;align-items:start;
+    transition:all 0.3s;
   }
-  .features-grid { display: flex; flex-direction: column; gap: 0; }
-  .feature-item {
-    padding: 2.5rem 0;
-    border-bottom: 1px solid var(--border);
-    display: grid; grid-template-columns: 80px 1fr; gap: 2rem;
-    align-items: start;
-    transition: all 0.3s;
+  .feature-item:first-child{border-top:1px solid var(--border);}
+  .feature-item:hover{padding-left:0.8rem;}
+  .feature-num{
+    font-family:'DM Serif Display',serif;font-size:2.4rem;
+    color:var(--border);line-height:1;transition:color 0.3s;
   }
-  .feature-item:first-child { border-top: 1px solid var(--border); }
-  .feature-item:hover { padding-left: 1rem; }
-  .feature-num {
-    font-family: 'DM Serif Display', serif; font-size: 2.5rem;
-    color: var(--border); line-height: 1;
-    transition: color 0.3s;
+  .feature-item:hover .feature-num{color:var(--orange);}
+  .feature-content h3{
+    font-family:'Shippori Mincho',serif;font-size:1.1rem;
+    font-weight:500;margin-bottom:0.7rem;letter-spacing:0.05em;color:var(--brown-deep);
   }
-  .feature-item:hover .feature-num { color: var(--gold); }
-  .feature-content h3 {
-    font-family: 'Shippori Mincho', serif; font-size: 1.15rem;
-    font-weight: 500; margin-bottom: 0.8rem; letter-spacing: 0.05em;
-  }
-  .feature-content p { font-size: 0.88rem; line-height: 1.9; color: var(--ink-light); }
+  .feature-content p{font-size:0.87rem;line-height:1.95;color:var(--text-mid);}
 
-  /* ─── CONCERNS ─── */
-  .concerns { background: var(--ink); color: var(--cream); }
-  .concerns .section-label { color: var(--gold-light); }
-  .concerns .section-label::after { background: rgba(255,255,255,0.15); }
-  .concerns .section-title { color: var(--cream); }
-  .concerns-grid {
-    margin-top: 3.5rem;
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+  /* ── INTERVIEW ── */
+  .interview{background:var(--cream);}
+  .interview-grid{
+    margin-top:3rem;
+    display:grid;grid-template-columns:1fr 1fr;gap:3rem;
   }
-  .concern-card {
-    border: 1px solid rgba(184,147,90,0.3);
-    padding: 1.8rem 2rem;
-    display: flex; align-items: flex-start; gap: 1rem;
-    transition: all 0.3s;
-    position: relative; overflow: hidden;
+  .interview-block{
+    border-left:3px solid var(--orange);
+    padding:1.8rem 2rem;
+    background:var(--parchment);
   }
-  .concern-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(184,147,90,0.05) 0%, transparent 100%);
-    opacity: 0; transition: opacity 0.3s;
+  .interview-q{
+    font-family:'Shippori Mincho',serif;
+    font-size:1rem;font-weight:700;color:var(--orange);
+    margin-bottom:1rem;line-height:1.5;
   }
-  .concern-card:hover { border-color: var(--gold); }
-  .concern-card:hover::before { opacity: 1; }
-  .concern-check {
-    width: 24px; height: 24px; flex-shrink: 0;
-    border: 1px solid var(--gold); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--gold); font-size: 0.65rem; margin-top: 2px;
-  }
-  .concern-card p { font-size: 0.88rem; line-height: 1.7; color: rgba(250,247,242,0.85); }
+  .interview-q::before{content:'Q. ';}
+  .interview-a{font-size:0.87rem;line-height:2;color:var(--text-mid);}
+  .interview-a strong{color:var(--brown-deep);}
 
-  /* ─── PROFILE ─── */
-  .profile {
-    background: var(--cream);
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
-    align-items: center;
+  /* ── CONCERNS ── */
+  .concerns{background:var(--brown-deep);color:var(--cream);}
+  .concerns .section-label{color:var(--orange-pale);}
+  .concerns .section-label::after{background:rgba(255,255,255,0.15);}
+  .concerns .section-title{color:var(--cream);}
+  .concerns-grid{
+    margin-top:3rem;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;
   }
-  .profile-visual { position: relative; }
-  .profile-img-wrap {
-    aspect-ratio: 4/5; background: var(--parchment);
-    position: relative; overflow: hidden;
-    border: 1px solid var(--border);
+  .concern-card{
+    border:1px solid rgba(200,98,26,0.35);
+    padding:1.6rem 1.8rem;
+    display:flex;align-items:flex-start;gap:0.9rem;
+    transition:all 0.3s;position:relative;overflow:hidden;
   }
-  .profile-img-wrap::before {
-    content: ''; position: absolute;
-    top: -20px; left: -20px; right: 20px; bottom: 20px;
-    border: 1px solid var(--gold); z-index: 0;
+  .concern-card::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(200,98,26,0.07) 0%,transparent 100%);
+    opacity:0;transition:opacity 0.3s;
   }
-  .profile-img-inner {
-    position: absolute; inset: 0;
-    background: url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center/cover;
+  .concern-card:hover{border-color:var(--orange-light);}
+  .concern-card:hover::before{opacity:1;}
+  .concern-check{
+    width:22px;height:22px;flex-shrink:0;
+    border:1px solid var(--orange-light);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--orange-light);font-size:0.62rem;margin-top:2px;
   }
-  .profile-card {
-    position: absolute; bottom: -1.5rem; right: -1.5rem;
-    background: var(--gold); color: var(--cream);
-    padding: 1.5rem 2rem; z-index: 2;
-  }
-  .profile-card .years {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.8rem; line-height: 1;
-  }
-  .profile-card .years-label { font-size: 0.72rem; letter-spacing: 0.1em; margin-top: 0.3rem; opacity: 0.85; }
+  .concern-card p{font-size:0.86rem;line-height:1.75;color:rgba(253,246,238,0.87);}
 
-  .profile-content .lawyer-name {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 2rem; font-weight: 500; letter-spacing: 0.1em;
-    margin: 1.5rem 0 0.5rem;
+  /* ── CASES (解決事例) ── */
+  .cases{background:var(--parchment);}
+  .cases-grid{
+    margin-top:3rem;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.8rem;
   }
-  .profile-content .lawyer-name span {
-    display: block; font-size: 0.65em; color: var(--gold);
-    font-weight: 400; letter-spacing: 0.2em; margin-bottom: 0.3rem;
+  .case-card{
+    background:var(--cream);border:1px solid var(--border);
+    padding:2rem;transition:all 0.3s;
   }
-  .profile-content .lawyer-sub {
-    font-size: 0.82rem; color: var(--ink-light); letter-spacing: 0.1em;
-    margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);
+  .case-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 12px 30px var(--shadow);}
+  .case-tag{
+    display:inline-block;
+    background:var(--orange);color:var(--cream);
+    font-size:0.68rem;letter-spacing:0.12em;
+    padding:0.28rem 0.75rem;margin-bottom:1rem;
   }
-  .profile-content p {
-    font-size: 0.9rem; line-height: 2.1; color: var(--ink-light);
-    margin-bottom: 1.2rem;
+  .case-title{
+    font-family:'Shippori Mincho',serif;
+    font-size:1rem;font-weight:700;color:var(--brown-deep);
+    margin-bottom:0.8rem;line-height:1.5;
   }
-  .profile-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    margin-top: 2rem;
+  .case-body{font-size:0.84rem;line-height:1.9;color:var(--text-mid);}
+  .case-result{
+    margin-top:1.1rem;padding-top:1rem;
+    border-top:1px solid var(--border);
+    font-size:0.8rem;color:var(--orange);letter-spacing:0.05em;
   }
-  .stat-box {
-    border: 1px solid var(--border); padding: 1.2rem;
-    text-align: center;
-  }
-  .stat-box .stat-val {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.8rem; color: var(--gold); line-height: 1;
-  }
-  .stat-box .stat-label {
-    font-size: 0.72rem; color: var(--ink-light); letter-spacing: 0.08em;
-    margin-top: 0.3rem;
-  }
+  .case-result::before{content:'解決結果 → ';}
 
-  /* ─── FEES ─── */
-  .fees { background: var(--parchment); }
-  .fees-grid {
-    margin-top: 3.5rem;
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2px; border: 1px solid var(--border);
+  /* ── PROFILE ── */
+  .profile{
+    background:var(--cream);
+    display:grid;grid-template-columns:340px 1fr;gap:5rem;align-items:start;
   }
-  .fee-card {
-    background: var(--cream); padding: 3rem 2.5rem;
-    border-right: 1px solid var(--border);
+  .profile-visual{position:relative;}
+  .profile-img-wrap{
+    width:240px;height:290px;
+    background:var(--parchment);
+    position:relative;overflow:hidden;
+    border:1px solid var(--border);
+    margin:0 auto;
   }
-  .fee-card:last-child { border-right: none; }
-  .fee-type {
-    font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold);
-    margin-bottom: 1.5rem; text-transform: uppercase;
+  .profile-img-wrap::before{
+    content:'';position:absolute;
+    top:-14px;left:-14px;right:14px;bottom:14px;
+    border:1px solid var(--orange);z-index:0;
   }
-  .fee-amount {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem; line-height: 1; margin-bottom: 0.5rem;
+  .profile-img-inner{
+    position:absolute;inset:0;
+    background:url('https://images.microcms-assets.io/assets/e77f0bdcd7ae440a8792a88d34e43a68/cdae90b1b4354c46bd2b5eecba1d0d32/%E5%86%99%E7%9C%9F%EF%BC%91%E3%80%80%E3%81%AB%E3%82%89%E3%81%95%E3%81%8D%E6%B3%95%E5%BE%8B%E4%BA%8B%E5%8B%99%E6%89%80.jpg?w=730&h=350&fm=webp&auto=compress') center top/cover;
   }
-  .fee-amount span { font-size: 1rem; font-family: 'Noto Serif JP', serif; }
-  .fee-note { font-size: 0.82rem; line-height: 1.8; color: var(--ink-light); margin-top: 1.2rem; }
+  .profile-card{
+    position:absolute;bottom:-1.2rem;right:calc(50% - 120px - 1.2rem);
+    background:var(--orange);color:var(--cream);
+    padding:1.2rem 1.7rem;z-index:2;
+  }
+  .profile-card .years{
+    font-family:'DM Serif Display',serif;font-size:2.4rem;line-height:1;
+  }
+  .profile-card .years-label{font-size:0.7rem;letter-spacing:0.1em;margin-top:0.2rem;opacity:0.88;}
+  .profile-content .lawyer-name{
+    font-family:'Shippori Mincho',serif;
+    font-size:1.9rem;font-weight:500;letter-spacing:0.1em;
+    margin:1.4rem 0 0.4rem;color:var(--brown-deep);
+  }
+  .profile-content .lawyer-name span{
+    display:block;font-size:0.62em;color:var(--orange);
+    font-weight:400;letter-spacing:0.2em;margin-bottom:0.25rem;
+  }
+  .profile-content .lawyer-sub{
+    font-size:0.8rem;color:var(--text-mid);letter-spacing:0.1em;
+    margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--border);
+  }
+  .profile-content p{font-size:0.89rem;line-height:2.1;color:var(--text-mid);margin-bottom:1.1rem;}
+  .profile-stats{
+    display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem;
+  }
+  .stat-box{border:1px solid var(--border);padding:1.1rem;text-align:center;background:var(--parchment);}
+  .stat-box .stat-val{
+    font-family:'DM Serif Display',serif;
+    font-size:1.7rem;color:var(--orange);line-height:1;
+  }
+  .stat-box .stat-label{font-size:0.7rem;color:var(--text-mid);letter-spacing:0.08em;margin-top:0.25rem;}
 
-  /* ─── INFO ─── */
-  .info { background: var(--cream); }
-  .info-grid {
-    margin-top: 3.5rem;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-    align-items: start;
+  /* ── FEES ── */
+  .fees{background:var(--parchment);}
+  .fees-grid{
+    margin-top:3rem;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2px;border:1px solid var(--border);
   }
-  .info-table { border-collapse: collapse; width: 100%; }
-  .info-table tr { border-bottom: 1px solid var(--border); }
-  .info-table td {
-    padding: 1.1rem 0; font-size: 0.88rem; vertical-align: top;
+  .fee-card{background:var(--cream);padding:2.8rem 2.3rem;border-right:1px solid var(--border);}
+  .fee-card:last-child{border-right:none;}
+  .fee-type{font-size:0.73rem;letter-spacing:0.2em;color:var(--orange);margin-bottom:1.3rem;text-transform:uppercase;}
+  .fee-amount{
+    font-family:'DM Serif Display',serif;
+    font-size:2.8rem;line-height:1;margin-bottom:0.4rem;color:var(--brown-deep);
   }
-  .info-table td:first-child {
-    color: var(--ink-light); font-size: 0.8rem; letter-spacing: 0.08em;
-    width: 110px; padding-right: 1rem;
-  }
-  .info-table td:last-child { color: var(--ink); line-height: 1.7; }
-  .map-placeholder {
-    aspect-ratio: 4/3; background: var(--parchment);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .map-inner {
-    width: 100%; height: 100%;
-  }
-  .map-inner iframe { width: 100%; height: 100%; border: 0; }
+  .fee-amount span{font-size:1rem;font-family:'Noto Serif JP',serif;}
+  .fee-note{font-size:0.81rem;line-height:1.85;color:var(--text-mid);margin-top:1.1rem;}
 
-  /* ─── CONTACT ─── */
-  .contact {
-    background: var(--ink); color: var(--cream);
-    text-align: center; padding: 6rem 8vw;
-    position: relative; overflow: hidden;
+  /* ── INFO ── */
+  .info{background:var(--cream);}
+  .info-grid{
+    margin-top:3rem;
+    display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;
   }
-  .contact::before {
-    content: '法'; position: absolute;
-    font-family: 'Shippori Mincho', serif;
-    font-size: 30vw; font-weight: 700;
-    color: rgba(255,255,255,0.025);
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    pointer-events: none;
+  .info-table{border-collapse:collapse;width:100%;}
+  .info-table tr{border-bottom:1px solid var(--border);}
+  .info-table td{padding:1rem 0;font-size:0.87rem;vertical-align:top;}
+  .info-table td:first-child{
+    color:var(--text-mid);font-size:0.78rem;letter-spacing:0.08em;
+    width:105px;padding-right:1rem;
   }
-  .contact .section-label { justify-content: center; color: var(--gold-light); }
-  .contact .section-label::after { display: none; }
-  .contact .section-label::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
-  .contact .section-title { color: var(--cream); margin-bottom: 1rem; }
-  .contact-sub { color: rgba(250,247,242,0.6); font-size: 0.9rem; line-height: 1.9; margin-bottom: 3rem; }
-  .contact-options { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-  .contact-card {
-    border: 1px solid rgba(184,147,90,0.4); padding: 2.5rem 3rem;
-    flex: 1; max-width: 320px; transition: all 0.3s;
-    text-decoration: none; color: var(--cream);
-    display: block;
-  }
-  .contact-card:hover { border-color: var(--gold); background: rgba(184,147,90,0.08); }
-  .contact-card .c-icon { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold); }
-  .contact-card h3 { font-family: 'Shippori Mincho', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .contact-card p { font-size: 0.78rem; color: rgba(250,247,242,0.55); line-height: 1.7; }
-  .contact-free-note {
-    margin-top: 2.5rem; font-size: 0.78rem;
-    color: rgba(250,247,242,0.4); letter-spacing: 0.1em;
-  }
+  .info-table td:last-child{color:var(--brown-deep);line-height:1.75;}
+  .map-wrap{aspect-ratio:4/3;background:var(--parchment);border:1px solid var(--border);overflow:hidden;}
+  .map-wrap iframe{width:100%;height:100%;border:0;}
 
-  /* ─── FOOTER ─── */
-  footer {
-    background: #110e0b; color: rgba(250,247,242,0.4);
-    padding: 2.5rem 8vw;
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 0.75rem; letter-spacing: 0.1em;
+  /* ── CONTACT ── */
+  .contact{
+    background:var(--brown-deep);color:var(--cream);
+    text-align:center;padding:5.5rem 8vw;
+    position:relative;overflow:hidden;
   }
-  footer .footer-logo {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 1rem; color: rgba(250,247,242,0.7);
-    letter-spacing: 0.1em;
+  .contact::before{
+    content:'律';position:absolute;
+    font-family:'Shippori Mincho',serif;
+    font-size:28vw;font-weight:700;
+    color:rgba(255,255,255,0.025);
+    top:50%;left:50%;transform:translate(-50%,-50%);
+    pointer-events:none;
+  }
+  .contact .section-label{justify-content:center;color:var(--orange-pale);}
+  .contact .section-label::after,.contact .section-label::before{content:'';width:36px;height:1px;background:var(--orange-light);}
+  .contact .section-title{color:var(--cream);margin-bottom:0.9rem;}
+  .contact-sub{color:rgba(253,246,238,0.58);font-size:0.9rem;line-height:1.95;margin-bottom:2.8rem;}
+  .contact-options{display:flex;gap:1.8rem;justify-content:center;flex-wrap:wrap;}
+  .contact-card{
+    border:1px solid rgba(200,98,26,0.42);padding:2.3rem 2.8rem;
+    flex:1;max-width:300px;transition:all 0.3s;
+    text-decoration:none;color:var(--cream);display:block;
+  }
+  .contact-card:hover{border-color:var(--orange-light);background:rgba(200,98,26,0.1);}
+  .contact-card .c-icon{font-size:1.4rem;margin-bottom:0.9rem;color:var(--orange-light);}
+  .contact-card h3{font-family:'Shippori Mincho',serif;font-size:1.05rem;margin-bottom:0.5rem;}
+  .contact-card p{font-size:0.76rem;color:rgba(253,246,238,0.55);line-height:1.75;}
+  .contact-free-note{
+    margin-top:2.3rem;font-size:0.76rem;
+    color:rgba(253,246,238,0.38);letter-spacing:0.1em;
   }
 
-  /* ─── ANIMATIONS ─── */
-  .fade-in {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+  /* ── FOOTER ── */
+  footer{
+    background:#22100a;color:rgba(253,246,238,0.38);
+    padding:2.3rem 8vw;
+    display:flex;align-items:center;justify-content:space-between;
+    font-size:0.73rem;letter-spacing:0.1em;
   }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  footer .footer-logo{
+    font-family:'Shippori Mincho',serif;
+    font-size:0.98rem;color:rgba(253,246,238,0.68);letter-spacing:0.1em;
+  }
+  footer a{color:var(--orange-light);text-decoration:none;margin-left:1.2rem;}
+  footer a:hover{color:var(--orange-pale);}
 
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
-    nav { padding: 0 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 4rem 6vw 3rem; }
-    .hero-right { height: 50vw; min-height: 300px; }
-    .features { grid-template-columns: 1fr; gap: 3rem; }
-    .features-intro { position: static; }
-    .profile { grid-template-columns: 1fr; gap: 3rem; }
-    .info-grid { grid-template-columns: 1fr; }
-    section { padding: 5rem 6vw; }
-    .fee-card { border-right: none; border-bottom: 1px solid var(--border); }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  /* ── ANIMATIONS ── */
+  .fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.8s ease,transform 0.8s ease;}
+  .fade-in.visible{opacity:1;transform:translateY(0);}
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:960px){
+    nav{padding:0 1.5rem;}
+    .nav-links{display:none;}
+    .hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-left{padding:4rem 6vw 3rem;}
+    .hero-right{height:55vw;min-height:280px;}
+    .features{grid-template-columns:1fr;gap:2.5rem;}
+    .features-intro{position:static;}
+    .interview-grid{grid-template-columns:1fr;}
+    .profile{grid-template-columns:1fr;gap:3rem;}
+    .profile-img-wrap{width:200px;height:240px;}
+    .info-grid{grid-template-columns:1fr;}
+    section{padding:5rem 6vw;}
+    .fee-card{border-right:none;border-bottom:1px solid var(--border);}
+    footer{flex-direction:column;gap:1rem;text-align:center;}
   }
 </style>
 </head>
@@ -457,13 +451,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#"><span>に</span>らさき法律事務所</a>
+  <a class="nav-logo" href="index.html"><span>に</span>らさき法律事務所</a>
   <ul class="nav-links">
-    <li><a href="#features">強み・特徴</a></li>
-    <li><a href="#concerns">お悩み</a></li>
+    <li><a href="#features">強み</a></li>
+    <li><a href="#interview">インタビュー</a></li>
+    <li><a href="#cases">解決事例</a></li>
     <li><a href="#profile">弁護士紹介</a></li>
     <li><a href="#fees">料金</a></li>
     <li><a href="#info">事務所情報</a></li>
+    <li><a href="souzoku.html">相続専門ページ</a></li>
     <li><a href="#contact" class="nav-cta">無料相談</a></li>
   </ul>
 </nav>
@@ -471,33 +467,31 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow">相続・遺産分割専門</div>
+    <div class="hero-eyebrow">Nirasaki Law Office</div>
     <h1 class="hero-title">
-      <em>Nirasaki Law Office</em>
-      複雑な相続も<br>円満解決へ。
+      <em>地域に寄り添う、韮崎の弁護士</em>
+      難しい問題も、<br>「何とかなる」。
     </h1>
     <p class="hero-sub">
-      多数の相続人、行方不明者、複雑な不動産問題——<br>
-      どんな難題も「何とかなる」の信念で、<br>
-      粘り強く解決へ導きます。
+      相続・遺言・不動産・家族間の紛争など、<br>
+      どんなご相談でもじっくりお話を伺います。<br>
+      韮崎駅から徒歩6分。まずはお気軽にどうぞ。
     </p>
     <div class="hero-badges">
       <span class="badge">初回相談 無料</span>
       <span class="badge">平日夜間対応可</span>
       <span class="badge">オンライン相談可</span>
+      <span class="badge">駐車場あり</span>
     </div>
     <div class="hero-cta-group">
       <a href="#contact" class="btn-primary">無料相談のご予約</a>
-      <a href="#features" class="btn-secondary">詳しく見る →</a>
+      <a href="souzoku.html" class="btn-secondary">相続専門ページ →</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-image-grid">
       <div class="hero-img-main"></div>
-      <div class="hero-img-sub">
-        <div></div>
-        <div></div>
-      </div>
+      <div class="hero-img-sub"><div></div><div></div></div>
     </div>
     <div class="hero-tag">
       <div class="tag-num">17</div>
@@ -509,26 +503,14 @@
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>初回相談無料</span>
-    <span>遺産分割</span>
-    <span>相続放棄</span>
-    <span>遺言書作成</span>
-    <span>遺留分請求</span>
-    <span>不在者財産管理</span>
-    <span>相続登記</span>
-    <span>遺言無効確認訴訟</span>
-    <span>行方不明相続人対応</span>
-    <span>司法書士・税理士連携</span>
-    <span>初回相談無料</span>
-    <span>遺産分割</span>
-    <span>相続放棄</span>
-    <span>遺言書作成</span>
-    <span>遺留分請求</span>
-    <span>不在者財産管理</span>
-    <span>相続登記</span>
-    <span>遺言無効確認訴訟</span>
-    <span>行方不明相続人対応</span>
-    <span>司法書士・税理士連携</span>
+    <span>初回相談無料</span><span>相続・遺産分割</span><span>遺言書作成</span>
+    <span>相続放棄</span><span>遺留分請求</span><span>不在者財産管理</span>
+    <span>平日夜間対応</span><span>オンライン相談可</span><span>韮崎駅徒歩6分</span>
+    <span>司法書士・税理士と連携</span>
+    <span>初回相談無料</span><span>相続・遺産分割</span><span>遺言書作成</span>
+    <span>相続放棄</span><span>遺留分請求</span><span>不在者財産管理</span>
+    <span>平日夜間対応</span><span>オンライン相談可</span><span>韮崎駅徒歩6分</span>
+    <span>司法書士・税理士と連携</span>
   </div>
 </div>
 
@@ -537,43 +519,75 @@
   <div class="features-intro fade-in">
     <div class="section-label">Our Strengths</div>
     <h2 class="section-title">当事務所の<br>強みと特徴</h2>
-    <p>山梨県北西部に根ざし、地域の皆さまの相続問題に17年間向き合ってきました。</p>
+    <p>山梨県北西部に根ざし、地域の皆さまの法律問題に17年間向き合ってきました。</p>
   </div>
   <div class="features-grid">
     <div class="feature-item fade-in">
       <div class="feature-num">01</div>
       <div class="feature-content">
         <h3>じっくりお話を伺います</h3>
-        <p>打ち合わせに2時間ほどお時間をいただくことも珍しくありません。ご相談者さまの不安と本当のお気持ちを深く理解することを何よりも大切にしています。</p>
+        <p>打ち合わせに2時間ほどお時間をいただくことも珍しくありません。ご相談者さまの不安と本当のお気持ちを深く理解することを何よりも大切にしています。多くの方から「丁寧に話を聞いてもらえて気持ちが楽になった」とのお言葉をいただきます。</p>
       </div>
     </div>
     <div class="feature-item fade-in">
       <div class="feature-num">02</div>
       <div class="feature-content">
-        <h3>複雑な相続案件に豊富な実績</h3>
-        <p>相続人が何十人にも膨れ上がったケース、行方不明者がいるケース、長年放置された不動産問題など、難題もお任せください。</p>
+        <h3>複雑な案件に豊富な実績</h3>
+        <p>相続人が何十人にも膨れ上がったケース、行方不明者がいるケース、長年放置された不動産問題など、難題もお任せください。「何とかなる」の信念で、ご依頼案件のほとんどを最終解決まで見届けてまいりました。</p>
       </div>
     </div>
     <div class="feature-item fade-in">
       <div class="feature-num">03</div>
       <div class="feature-content">
         <h3>司法書士・税理士と連携しワンストップ対応</h3>
-        <p>戸籍謄本の収集から遺産分割協議書の作成、登記手続き、税務申告まで。お客さまがあちこちを訪ねるお手間はかかりません。</p>
+        <p>戸籍謄本の収集から遺産分割協議書の作成、相続登記手続き、税務申告まで。日頃から韮崎市・北杜市周辺の士業と緊密に連携し、お客さまがあちこちを訪ねるお手間をかけません。</p>
       </div>
     </div>
     <div class="feature-item fade-in">
       <div class="feature-num">04</div>
       <div class="feature-content">
         <h3>平日夜間・オンライン相談に対応</h3>
-        <p>お仕事終わりの時間帯（19時半頃まで）でも対応可能。オンラインでのご相談もお受けしています。</p>
+        <p>「日中は仕事で時間が取れない」という方のために柔軟な相談体制を整えています。事前のご予約で平日19時半頃まで対応可能。Zoom等によるオンライン相談もお受けしています。</p>
       </div>
     </div>
     <div class="feature-item fade-in">
       <div class="feature-num">05</div>
       <div class="feature-content">
-        <h3>「何とかなる」の信念で粘り強く</h3>
-        <p>ご依頼いただいた相続案件のほとんどを最終的な解決まで見届けてまいりました。困難に見える状況でも諦めずに取り組みます。</p>
+        <h3>地域密着・アクセス良好</h3>
+        <p>事務所は韮崎駅から徒歩6分、旧甲州街道沿い。北杜市・韮崎市・甲斐市・南アルプス市はもちろん、長野県の一部地域からもご相談をいただいております。事務所前には広い駐車スペースもあります。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW -->
+<section class="interview" id="interview">
+  <div class="section-label fade-in">Interview</div>
+  <h2 class="section-title fade-in">事務所詳細インタビュー</h2>
+  <div class="interview-grid">
+    <div class="interview-block fade-in">
+      <div class="interview-q">事務所の強みを教えてください</div>
+      <div class="interview-a">複雑な相続も◎円満解決へ導きます。多数の相続人、行方不明者がいるケースも解決実績豊富。<strong>「何とかなる」</strong>をモットーに、どんな難題も粘り強く対応します。大切なご家族の「すっきりした」笑顔のために、全力でサポートします。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">相談者への向き合い方を教えてください</div>
+      <div class="interview-a">相続の問題は法律的なことだけでなく、ご家族の感情が複雑に絡み合うデリケートなもの。だからこそ<strong>まずお話をじっくり伺う</strong>ことを大切にしています。打ち合わせに2時間ほどいただくことも珍しくありません。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">複雑な相続案件はどう解決しますか？</div>
+      <div class="interview-a">曽祖父の代から相続登記が手つかずで<strong>相続人が何十人にも膨れ上がっている</strong>ケースも扱います。粘り強くお手紙を送ったり、遺産分割調停を申し立てたりと、豊富な経験に基づいて解決へ導きます。諦めないでください。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">行方不明者がいる場合はどうなりますか？</div>
+      <div class="interview-a">相続人の中に行方不明の方がいる場合、裁判所への<strong>「不在者財産管理人」</strong>選任申立てに対応しています。また相続人が誰もいない場合の<strong>「相続財産清算人」</strong>選任や、遺言無効確認訴訟、財産使い込みの問題にも日常的に対応しています。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">費用について教えてください</div>
+      <div class="interview-a"><strong>初回のご相談は無料</strong>です。「こんなことを弁護士に相談していいのだろうか」と悩まれる前に、まずお気軽にお話しください。2回目以降は1回11,000円（税込）。着手金・報酬金は事案ごとに丁寧にご説明します。</div>
+    </div>
+    <div class="interview-block fade-in">
+      <div class="interview-q">相続登記の義務化について教えてください</div>
+      <div class="interview-a">相続登記は<strong>2024年4月から義務化</strong>されました。放置するリスクは増えています。長年親や祖父母の名義のまま放置されていた不動産の問題が解決したとき、ご依頼者さまは「本当にすっきりした」と安堵されます。早めのご相談をおすすめします。</div>
     </div>
   </div>
 </section>
@@ -583,45 +597,59 @@
   <div class="section-label fade-in">Concerns We Solve</div>
   <h2 class="section-title fade-in">こんなお悩み<br>お任せください</h2>
   <div class="concerns-grid">
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>多数の相続人で登記が進まず困っている</p>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>多数の相続人で登記が進まず困っている</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>行方不明の相続人がいて遺産分割ができない</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>身寄りのない親族の財産整理に困っている</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺産分割協議がまとまらず連絡も難しい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺留分を請求できるか知りたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>借金を相続放棄したい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>家族間の争いを避ける遺言書を作成したい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>遺産分割調停を申し立てたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>不当な財産使い込みを訴えたい</p></div>
+    <div class="concern-card fade-in"><div class="concern-check">✓</div><p>複雑な相続問題の解決策を見つけたい</p></div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="section-label fade-in">Case Studies</div>
+  <h2 class="section-title fade-in">解決事例</h2>
+  <div class="cases-grid">
+    <div class="case-card fade-in">
+      <span class="case-tag">遺産分割・多数相続人</span>
+      <div class="case-title">曽祖父の代から放置された不動産、相続人30名超の遺産分割</div>
+      <div class="case-body">曽祖父の代から相続登記が手つかずになっており、相続人が何十人にも膨れ上がっていたケース。相続人全員から実印をもらうことは現実的に困難な状況でした。粘り強くお手紙を送り続け、遺産分割調停を申し立てることで解決へ導きました。</div>
+      <div class="case-result">遺産分割協議成立・相続登記完了</div>
     </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>行方不明の相続人がいて遺産分割ができない</p>
+    <div class="case-card fade-in">
+      <span class="case-tag">不在者財産管理</span>
+      <div class="case-title">行方不明の相続人がいて手続きが進まないケース</div>
+      <div class="case-body">相続人の一人が長年行方不明で連絡が取れず、遺産分割の手続きが一切進められない状態でした。裁判所に「不在者財産管理人」の選任を申し立て、法的に手続きを進める道筋をつけました。</div>
+      <div class="case-result">不在者財産管理人選任→遺産分割協議成立</div>
     </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>身寄りのない親族の財産整理に困っている</p>
+    <div class="case-card fade-in">
+      <span class="case-tag">相続財産清算</span>
+      <div class="case-title">身寄りのない親族の財産整理・相続財産清算人選任</div>
+      <div class="case-body">亡くなった方にご家族がおらず相続人が誰もいないケース。放置すると財産が宙に浮いたままになるため、「相続財産清算人」の選任申立てを行い、財産を適切に整理しました。</div>
+      <div class="case-result">相続財産清算人選任→財産整理完了</div>
     </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>遺産分割協議がまとまらず連絡も難しい</p>
+    <div class="case-card fade-in">
+      <span class="case-tag">遺言無効確認訴訟</span>
+      <div class="case-title">遺言書の内容に納得できないとして無効確認を求めたケース</div>
+      <div class="case-body">亡くなった方が残した遺言書の内容に疑問があり、作成時の意思能力や手続きに問題があると判断し遺言無効確認訴訟を提起。証拠を丁寧に積み上げ、ご依頼者にとって有利な結果を得ることができました。</div>
+      <div class="case-result">遺言無効確認判決・適正な遺産分割実現</div>
     </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>遺留分を請求できるか知りたい</p>
+    <div class="case-card fade-in">
+      <span class="case-tag">生前の財産使い込み</span>
+      <div class="case-title">亡くなった方の預貯金を他の相続人が使い込んでいたケース</div>
+      <div class="case-body">被相続人の生前に他の相続人が多額の預貯金を引き出していたことが発覚。入出金履歴や医療記録をもとに使い込みを立証し、不当利得返還請求を行いました。</div>
+      <div class="case-result">使い込み分の返還合意・適正な遺産分割実現</div>
     </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>借金を相続放棄したい</p>
-    </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>家族間の争いを避ける遺言書を作成したい</p>
-    </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>遺産分割調停を申し立てたい</p>
-    </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>不当な財産使い込みを訴えたい</p>
-    </div>
-    <div class="concern-card fade-in">
-      <div class="concern-check">✓</div>
-      <p>複雑な相続問題の解決策を見つけたい</p>
+    <div class="case-card fade-in">
+      <span class="case-tag">相続放棄</span>
+      <div class="case-title">親が多額の借金を残して亡くなり相続放棄を希望するケース</div>
+      <div class="case-body">親が亡くなった後、多額の借金があることが判明。相続放棄の期限（3ヶ月）が迫るなか、ご相談を受けて即座に手続きを開始。期限内に家庭裁判所への申述が完了し、借金の相続を回避できました。</div>
+      <div class="case-result">相続放棄申述受理・借金承継を回避</div>
     </div>
   </div>
 </section>
@@ -641,23 +669,16 @@
     <div class="section-label">Attorney Profile</div>
     <h2 class="section-title">弁護士紹介</h2>
     <div class="lawyer-name">
-      <span>Attorney</span>
+      <span>Attorney at Law</span>
       江口 伸介
     </div>
-    <div class="lawyer-sub">
-      弁護士登録番号 40093 ／ 山梨県弁護士会所属
-    </div>
+    <div class="lawyer-sub">弁護士登録番号 40093 ／ 山梨県弁護士会所属</div>
     <p>相続の問題は、法律的なことだけでなく、ご家族の感情が複雑に絡み合うデリケートなものです。だからこそ、まずご相談者さまのお話をじっくりと伺うことを何よりも大切にしています。</p>
     <p>多くの方から「丁寧に話を聞いてもらえて気持ちが楽になった」とのお言葉をいただきます。弁護士に相談するのは勇気がいるかもしれませんが、どうかご安心ください。</p>
+    <p>山梨県北西部の北杜市や韮崎市、甲斐市といった地域で長年にわたり身近な法律サービスを提供し、地域の司法書士・税理士とも緊密に連携して複雑な案件に対応しています。</p>
     <div class="profile-stats">
-      <div class="stat-box">
-        <div class="stat-val">無料</div>
-        <div class="stat-label">初回面談相談料</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-val">対応可</div>
-        <div class="stat-label">平日夜間・オンライン</div>
-      </div>
+      <div class="stat-box"><div class="stat-val">無料</div><div class="stat-label">初回面談相談料</div></div>
+      <div class="stat-box"><div class="stat-val">対応可</div><div class="stat-label">平日夜間・オンライン</div></div>
     </div>
   </div>
 </section>
@@ -670,20 +691,20 @@
     <div class="fee-card fade-in">
       <div class="fee-type">初回相談料</div>
       <div class="fee-amount">0<span>円</span></div>
-      <div class="fee-note">費用のことは心配されずにご来所ください。弁護士がじっくりとお話を伺ったうえ、今後の方針をアドバイスさせていただきます。</div>
+      <div class="fee-note">費用のことは心配されずにご来所ください。弁護士がじっくりとお話を伺い、今後の方針をアドバイスします。</div>
     </div>
     <div class="fee-card fade-in">
       <div class="fee-type">2回目以降の相談料</div>
-      <div class="fee-amount">11,000<span>円〜 / 回</span></div>
-      <div class="fee-note">2回目以降は1回11,000円（税込）。30分程度以内で終了した場合は5,500円（税込）となります。</div>
+      <div class="fee-amount">11,000<span>円〜/回</span></div>
+      <div class="fee-note">1回11,000円（税込）。30分程度以内で終了した場合は5,500円（税込）となります。</div>
     </div>
     <div class="fee-card fade-in">
       <div class="fee-type">着手金・報酬金</div>
       <div class="fee-amount">要<span>見積</span></div>
-      <div class="fee-note">事案の内容や難易度により個別にお見積りします。初回相談時に費用の目安をご説明しますのでご安心ください。</div>
+      <div class="fee-note">事案の内容・難易度により個別にご説明します。初回相談時に費用の目安をご案内しますのでご安心ください。</div>
     </div>
   </div>
-  <p style="margin-top:1.5rem; font-size:0.78rem; color:var(--ink-light); letter-spacing:0.05em;">※ 表示料金はすべて税込金額です。</p>
+  <p style="margin-top:1.3rem;font-size:0.76rem;color:var(--text-mid);letter-spacing:0.05em;">※ 表示料金はすべて税込金額です。</p>
 </section>
 
 <!-- INFO -->
@@ -695,22 +716,22 @@
       <table class="info-table">
         <tr><td>事務所名</td><td>にらさき法律事務所</td></tr>
         <tr><td>弁護士</td><td>江口 伸介</td></tr>
+        <tr><td>登録番号</td><td>40093</td></tr>
         <tr><td>所属弁護士会</td><td>山梨県弁護士会</td></tr>
+        <tr><td>電話番号</td><td>050-5284-9388</td></tr>
+        <tr><td>メール</td><td>eguchi@nirasaki-law-office.com</td></tr>
         <tr><td>住所</td><td>〒407-0024<br>山梨県韮崎市本町1-8-18</td></tr>
         <tr><td>最寄駅</td><td>JR中央本線 韮崎駅（徒歩6分）</td></tr>
         <tr><td>駐車場</td><td>事務所前に駐車スペースあり</td></tr>
-        <tr><td>営業時間</td><td>平日 9:15〜18:00<br>（夜間は予約により19:30頃まで対応）</td></tr>
-        <tr><td>対応地域</td><td>山梨県全域（北杜市・韮崎市・甲斐市・南アルプス市ほか）</td></tr>
+        <tr><td>営業時間</td><td>平日 9:15〜18:00<br>（夜間は予約により19:30頃まで）</td></tr>
+        <tr><td>対応地域</td><td>山梨県全域<br>（北杜市・韮崎市・甲斐市・南アルプス市ほか）</td></tr>
       </table>
     </div>
-    <div class="map-placeholder fade-in">
-      <div class="map-inner">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.4752!2d138.44573!3d35.71955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c5e2f9b4b1e9b%3A0x1234567890abcdef!2z5bGx5bqr5biC5pys55S677yR4oiS77yI4oiS77yI!5e0!3m2!1sja!2sjp!4v1712700000000!5m2!1sja!2sjp&q=山梨県韮崎市本町1-8-18"
-          allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+    <div class="map-wrap fade-in">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.4!2d138.4497!3d35.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c5e9f4b6bce77%3A0x6f1f2f3f4f5f6f7f!2z5bGx5bqr5biC5pys55S677yR4oiS77yI!5e0!3m2!1sja!2sjp!4v1712800000000!5m2!1sja!2sjp"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
@@ -737,7 +758,7 @@
     <a href="#" class="contact-card">
       <div class="c-icon">🎥</div>
       <h3>オンライン相談</h3>
-      <p>Zoom等を使用した<br>ビデオ通話でのご相談<br>にも対応しています</p>
+      <p>Zoom等によるビデオ通話<br>にも対応しています</p>
     </a>
   </div>
   <p class="contact-free-note fade-in">※ 初回面談相談料は無料です。費用の心配なくご相談いただけます。</p>
@@ -746,28 +767,20 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">にらさき法律事務所</div>
-  <div>© 2024 Nirasaki Law Office. All rights reserved.</div>
+  <div>
+    <a href="souzoku.html">相続専門ページ</a>
+    <span style="margin-left:2rem;">© 2024 Nirasaki Law Office. All rights reserved.</span>
+  </div>
 </footer>
 
 <script>
-  // Intersection Observer for fade-in animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Stagger feature items
-  document.querySelectorAll('.feature-item').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.1}s`;
-  });
-  document.querySelectorAll('.concern-card').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.06}s`;
-  });
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  },{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.feature-item').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.1}s`; });
+  document.querySelectorAll('.concern-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.06}s`; });
+  document.querySelectorAll('.case-card').forEach((el,i)=>{ el.style.transitionDelay=`${i*0.08}s`; });
 </script>
 </body>
 </html>
